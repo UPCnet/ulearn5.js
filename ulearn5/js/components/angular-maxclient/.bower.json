@@ -1,0 +1,32 @@
+{
+  "name": "angular-maxclient",
+  "main": "maxclient.js",
+  "homepage": "https://github.com/UPCnet/angular-maxclient",
+  "authors": [
+    "Victor Fernandez de Alba <sneridagh@gmail.com>"
+  ],
+  "description": "Angular MAX client services",
+  "keywords": [
+    "MAX",
+    "client",
+    "Angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "ulearn/js/components",
+    "test",
+    "tests"
+  ],
+  "_release": "d8d1738575",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d8d1738575ad695f029c493e287cad939ac7f554"
+  },
+  "_source": "git@github.com:/UPCnet/angular-maxclient.git",
+  "_target": "*",
+  "_originalSource": "git@github.com:/UPCnet/angular-maxclient.git"
+}
