@@ -17,8 +17,8 @@ module.exports = function (grunt) {
 
   // Configurable paths for the application
   var appConfig = {
-    app: require('./bower.json').appPath || 'app',
-    dist: '../genweb.cdn/genweb/cdn/dist',
+    app: 'ulearn5/js/app',
+    dist: '../ulearn5.theme/src/ulearn5/theme/theme/angular/dist',
     egg: 'ulearn5/js'
   };
 
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
       banner: '/*! <%= uglify.pkg.name %> - v<%= uglify.pkg.version %> - ' +
       '<%= grunt.template.today("yyyy-mm-dd") %> */'
   };
-
+  grunt.loadNpmTasks('grunt-ng-annotate');
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -41,27 +41,15 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.egg %>/browser/viewlets_templates/gwjsdevelviewlet.pt'],
         dest: '<%= yeoman.egg %>/browser/viewlets_templates/gwjsproductionviewlet.pt',
         replacements: [{
-          from: 'tal:attributes="src string:${portal_url}/++genweb++static',
-          to: 'src="../genweb.core/genweb/core/static'
-        },
-        {
-          from: 'tal:attributes="src string:${portal_url}/++components++root',
-          to: 'src="../genweb.js/genweb/js/components'
-        },
-        {
-          from: 'tal:attributes="src string:${portal_url}/++components++ulearn5',
+          from: 'tal:attributes="src string:${portal_url}/++components++ulearn',
           to: 'src="ulearn5/js/components'
         },
         {
-          from: 'tal:attributes="src string:${portal_url}/++genweb++js',
-          to: 'src="../genweb.js/genweb/js/legacy'
-        },
-        {
-          from: 'tal:attributes="src string:${portal_url}/++ulearn5++js',
+          from: 'tal:attributes="src string:${portal_url}/++ulearn++js',
           to: 'src="ulearn5/js/legacy'
         },
         {
-          from: 'tal:attributes="src string:${portal_url}/++ulearn5++app',
+          from: 'tal:attributes="src string:${portal_url}/++ulearn++app',
           to: 'src="ulearn5/js/app'
         },
         {
@@ -368,7 +356,6 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('gwbuild', [
-    // 'clean:dist',
     'ngAnnotate',
     'concat',
     'uglify',

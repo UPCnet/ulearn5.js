@@ -9,16 +9,6 @@
  * Main module of the uLearn Angular application.
  */
 
-// External modularization
-// var underscore = angular.module('underscore', []);
-// underscore.factory('_', function() {
-//   return window._;
-// });
-//
-// var ploneVariables = angular.module('ploneVariables', []);
-// ploneVariables.factory('plonePortalURL', function() {
-//   return window.portal_url;
-// });
 
 // The main GenwebApp definition
 var GenwebApp = angular.module('GenwebApp', [

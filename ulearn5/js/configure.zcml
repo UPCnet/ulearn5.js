@@ -8,15 +8,12 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="ulearn5.js">
 
+    <includeDependencies package="." />
+    <grok:grok package="." />
+    <include package=".browser" />
+
     <!-- Zope2 initialization -->
     <five:registerPackage package="." initialize=".initialize" />
-
-    <!-- Include configuration for dependencies listed in setup.py -->
-    <includeDependencies package="." />
-
-    <!-- Register all components defined with grok -->
-    <include package="grokcore.component" file="meta.zcml" />
-    <grok:grok package="." />
 
     <plone:static
       directory="legacy"
@@ -35,6 +32,13 @@
       type="components"
       name="ulearn"
     />
+
+    <plone:static
+      directory="dist"
+      type="genweb"
+      name="dist"
+    />
+
 
     <!-- Register the installation GenericSetup extension profile -->
     <genericsetup:registerProfile
