@@ -79,10 +79,10 @@
     "app"
   ],
   "replace_map": {
-    "../ulearn5.js/ulearn5/js/legacy": "++ulearn++js",
+    "../ulearn5.js/ulearn5/js/legacy": "++legacy++ulearn",
     "../ulearn5.js/ulearn5/js/components": "++components++ulearn",
-    "../ulearn5.js/ulearn5/js/app": "++ulearn++app",
-    "../ulearn5.theme/src/ulearn5/theme/theme": "++theme++ulearn5-theme",
+    "../ulearn5.js/ulearn5/js/app": "++app++ulearn",
+    "../ulearn5.theme/src/ulearn5/theme/theme": "++theme++ulearn5",
     "../ulearn5.theme/src/ulearn5/theme/portlets": "++ulearn++portlets"
   },
   "revision_info": {

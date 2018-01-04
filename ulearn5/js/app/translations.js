@@ -32,7 +32,7 @@ GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', 
                       return;
                   }
               },
-              templateUrl: '++ulearn++app/templates/searchusers.html'
+              templateUrl: '++app++ulearn/templates/searchusers.html'
             })
             .state('allcommunities', {
               url: '/allcommunities',
@@ -51,7 +51,7 @@ GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', 
                       return;
                   }
               },
-              templateUrl: '++ulearn++app/templates/allcommunities.html'
+              templateUrl: '++app++ulearn/templates/allcommunities.html'
             })
             .state('usercommunities', {
               url: '/usercommunities',
@@ -70,7 +70,7 @@ GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', 
                       return;
                   }
               },
-              templateUrl: '++ulearn++app/templates/usercommunities.html'
+              templateUrl: '++app++ulearn/templates/usercommunities.html'
             })
 
 

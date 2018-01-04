@@ -1,42 +1,51 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
-    xmlns:cmf="http://namespaces.zope.org/cmf"
-    xmlns:five="http://namespaces.zope.org/five"
-    xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:plone="http://namespaces.plone.org/plone"
-    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:grok="http://namespaces.zope.org/grok"
+    xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="ulearn5.js">
-
-    <includeDependencies package="." />
-    <grok:grok package="." />
-    <include package=".browser" />
 
     <!-- Zope2 initialization -->
     <five:registerPackage package="." initialize=".initialize" />
 
+    <!-- Include configuration for dependencies listed in setup.py -->
+    <includeDependencies package="." />
+    
+    <include package="plone.resource" file="meta.zcml"/>
+    <include package="grokcore.component" file="meta.zcml" />
+    <grok:grok package="." />
+    <include package=".browser" />
+
+    <!-- ++legacy++ulearn, antes ++ulearn++js -->
     <plone:static
       directory="legacy"
-      type="ulearn"
-      name="js"
+      type="legacy"
+      name="ulearn"
     />
 
+    <!-- ++app++ulearn, antes ++ulearn++app -->
     <plone:static
       directory="app"
-      type="ulearn"
-      name="app"
+      type="app"
+      name="ulearn"
     />
 
+    <!-- ++components++ulearn -->
     <plone:static
       directory="components"
       type="components"
       name="ulearn"
     />
 
+    <!-- ++dist++ulearn, antes ++genweb++dist -->
     <plone:static
       directory="dist"
-      type="genweb"
-      name="dist"
+      type="dist"
+      name="ulearn"
     />
 
 

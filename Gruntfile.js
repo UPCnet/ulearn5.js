@@ -45,11 +45,11 @@ module.exports = function (grunt) {
           to: 'src="ulearn5/js/components'
         },
         {
-          from: 'tal:attributes="src string:${portal_url}/++ulearn++js',
+          from: 'tal:attributes="src string:${portal_url}/++legacy++ulearn',
           to: 'src="ulearn5/js/legacy'
         },
         {
-          from: 'tal:attributes="src string:${portal_url}/++ulearn++app',
+          from: 'tal:attributes="src string:${portal_url}/++app++ulearn',
           to: 'src="ulearn5/js/app'
         },
         {

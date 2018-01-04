@@ -13,7 +13,7 @@
         $stateProvider
             .state('stats', {
               url: '/stats',
-              templateUrl: '++ulearn++app/ulearn.stats/templates/stats.html',
+              templateUrl: '++app++ulearn/ulearn.stats/templates/stats.html',
               controller: 'StatsController as statsctrl',
               resolve: {
                 hiderightportlets: function(){
@@ -28,12 +28,12 @@
             })
             .state('stats.activity', {
               url: '/activity',
-              templateUrl: '++ulearn++app/ulearn.stats/templates/activity.html',
+              templateUrl: '++app++ulearn/ulearn.stats/templates/activity.html',
               controller: 'StatsController as statsctrl'
             })
             .state('stats.chats', {
               url: '/chats',
-              templateUrl: '++ulearn++app/ulearn.stats/templates/chats.html',
+              templateUrl: '++app++ulearn/ulearn.stats/templates/chats.html',
               controller: 'StatsController as statsctrl'
             });
     }
