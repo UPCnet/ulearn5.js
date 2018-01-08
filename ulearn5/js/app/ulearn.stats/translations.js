@@ -196,5 +196,6 @@
         $translateProvider.determinePreferredLanguage(function () {
             return angular.element('html').attr('lang');
         });
+        $translateProvider.useSanitizeValueStrategy('escape');
     }
 })();

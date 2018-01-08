@@ -66,7 +66,7 @@
           "../ulearn5.js/ulearn5/js/components/angular-maxclient/MAXClient.js",
           "../ulearn5.js/ulearn5/js/components/angular-maxclient/MAXUtils.js",
           "../ulearn5.theme/src/ulearn5/theme/portlets/buttonbar/buttonbar.js",
-          "../ulearn5.theme/src/ulearn5/theme/portlets/subscribednews/subscribednews.js"
+          "../ulearn5.theme/src/ulearn5/theme/portlets/buttonbar/subscribednews.js"
         ],
         "production": [
           "../ulearn5.theme/src/ulearn5/theme/theme/angular/ulearn5.app.js"
@@ -85,8 +85,5 @@
     "../ulearn5.theme/src/ulearn5/theme/theme": "++theme++ulearn5",
     "../ulearn5.theme/src/ulearn5/theme/portlets": "++ulearn++portlets"
   },
-  "revision_info": {
-    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.ab590370.js",
-    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.bf129920.js"
-  }
+  "revision_info": {}
 }

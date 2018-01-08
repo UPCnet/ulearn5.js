@@ -285,6 +285,7 @@ GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', 
   $translateProvider.determinePreferredLanguage(function () {
     return angular.element('html').attr('lang');
   });
+  $translateProvider.useSanitizeValueStrategy('escape');
 }]);
 
 // angular-datatables custom translations
