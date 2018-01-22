@@ -64,9 +64,7 @@
           "../ulearn5.js/ulearn5/js/app/community/directives.js",
           "../ulearn5.js/ulearn5/js/app/communities/controllers.js",
           "../ulearn5.js/ulearn5/js/components/angular-maxclient/MAXClient.js",
-          "../ulearn5.js/ulearn5/js/components/angular-maxclient/MAXUtils.js",
-          "../ulearn5.theme/src/ulearn5/theme/portlets/buttonbar/buttonbar.js",
-          "../ulearn5.theme/src/ulearn5/theme/portlets/buttonbar/subscribednews.js"
+          "../ulearn5.js/ulearn5/js/components/angular-maxclient/MAXUtils.js"
         ],
         "production": [
           "../ulearn5.theme/src/ulearn5/theme/theme/angular/ulearn5.app.js"
@@ -86,7 +84,7 @@
     "../ulearn5.theme/src/ulearn5/theme/portlets": "++ulearn++portlets"
   },
   "revision_info": {
-    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.1adcad00.js",
-    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.55e4e4de.js"
+    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.3bc0022c.js",
+    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.90180fd6.js"
   }
 }
