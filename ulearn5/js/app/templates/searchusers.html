@@ -44,15 +44,16 @@
           ng-if="ctrl.users.length > 0">
           <span dir-paginate="user in ctrl.users.content | itemsPerPage: ctrl.pageSize" current-page="ctrl.currentPage" ng-cloak>
             <li class="mix">
-              <div class="row-fluid">
+              <div class="row">
 
-                <div class="span3">
+                <div class="col-md-3">
                   <a class="photo" ng-href="{{user.url}}" ng-bind-html="user.foto"></a>
                 </div>
 
-                <div class="span9">
+                <div class="col-md-9">
                   <a ng-href="{{user.url}}">
-                    <h4><span>{{user.fullname}}</span> <span class="usuari_petit">{{user.id}}</span></h4>
+                    <h4><span>{{user.fullname}}</span><br />
+                      <span class="usuari_petit">{{user.id}}</span></h4>
                   </a>
                   <span ng-repeat="field in ctrl.properties">
                     <p class="queryable" ng-show="user[field['name']]">
