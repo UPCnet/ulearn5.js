@@ -14,7 +14,7 @@
      *       the same class instance across an app.
      */
     /* @nInject */
-    function UserService($http, plonePortalURL) {
+    function UserService($http, plonePortalURL, CodeInfo) {
         this.search = Search;
 
         ////////////////////

@@ -247,7 +247,7 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
 }]);
 
 
-GenwebApp.controller('SharedWithMe', ['_', 'plonePortalURL', 'CommunityInfo', 'UserSubscriptions', 'SweetAlert', 'MAXInfo', '$http', '$window', '$timeout', '$translate', function (_, plonePortalURL, CommunityInfo, UserSubscriptions, SweetAlert, MAXInfo, $http, $window, $timeout, $translate) {
+GenwebApp.controller('SharedWithMe', ['_', 'plonePortalURL', 'CommunityInfo', 'CodeInfo', 'UserSubscriptions', 'SweetAlert', 'MAXInfo', '$http', '$window', '$timeout', '$translate', function (_, plonePortalURL, CommunityInfo, CodeInfo, UserSubscriptions, SweetAlert, MAXInfo, $http, $window, $timeout, $translate) {
     var self = this;
     self.currentPage = 1;
     self.pageSize = 10;
@@ -264,7 +264,7 @@ GenwebApp.controller('SharedWithMe', ['_', 'plonePortalURL', 'CommunityInfo', 'U
 
 }]);
 
-GenwebApp.controller('SearchUsersController', ['_', 'plonePortalURL', 'CommunityInfo', 'UserSubscriptions', 'SweetAlert', 'MAXInfo', '$http', '$window', '$timeout', '$translate', '$scope', '$stateParams', function (_, plonePortalURL, CommunityInfo, UserSubscriptions, SweetAlert, MAXInfo, $http, $window, $timeout, $translate, $scope, $stateParams) {
+GenwebApp.controller('SearchUsersController', ['_', 'plonePortalURL', 'CommunityInfo', 'CodeInfo', 'UserSubscriptions', 'SweetAlert', 'MAXInfo', '$http', '$window', '$timeout', '$translate', '$scope', '$stateParams', function (_, plonePortalURL, CommunityInfo, CodeInfo, UserSubscriptions, SweetAlert, MAXInfo, $http, $window, $timeout, $translate, $scope, $stateParams) {
     var self = this;
     self.currentPage = 1;
     self.query = $stateParams.search || '';

@@ -14,7 +14,7 @@ GenwebApp.controller('profilePortlet', [function () {
 
 }]);
 
-GenwebApp.controller('profilePortletModal', ['$scope', '$http', '$timeout', '$window', 'plonePortalURL', 'MAXInfo', 'SweetAlert', '$translate', function ($scope, $http, $timeout, $window, plonePortalURL, MAXInfo, SweetAlert, $translate) {
+GenwebApp.controller('profilePortletModal', ['$scope', '$http', '$timeout', '$window', 'plonePortalURL', 'MAXInfo', 'CodeInfo', 'SweetAlert', '$translate', function ($scope, $http, $timeout, $window, plonePortalURL, MAXInfo, CodeInfo, SweetAlert, $translate) {
   $scope.selected = $scope.ngDialogData.community_type;
   $scope.changeCommunityType = function (selected) {
     var data = {community_type: selected};

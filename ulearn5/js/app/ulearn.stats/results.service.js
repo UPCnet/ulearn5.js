@@ -14,7 +14,7 @@
      *       the same class instance across an app.
      */
     /* @nInject */
-    function ResultsService($http, $translate, plonePortalURL) {
+    function ResultsService($http, $translate, plonePortalURL, CodeInfo) {
         var self = this;
         self.show_results = false;
         self.is_drilldown = false;

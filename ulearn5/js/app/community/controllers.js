@@ -7,7 +7,7 @@
  * #
  */
 
-GenwebApp.controller('subscribeToOpenCommunity', ['_', 'CommunityInfo', 'UserSubscriptions', 'SweetAlert', 'MAXInfo', '$http', '$window', '$timeout', '$translate', function (_, CommunityInfo, UserSubscriptions, SweetAlert, MAXInfo, $http, $window, $timeout, $translate) {
+GenwebApp.controller('subscribeToOpenCommunity', ['_', 'CommunityInfo', 'CodeInfo', 'UserSubscriptions', 'SweetAlert', 'MAXInfo', '$http', '$window', '$timeout', '$translate', function (_, CommunityInfo, CodeInfo, UserSubscriptions, SweetAlert, MAXInfo, $http, $window, $timeout, $translate) {
     var self = this;
     self.show_alert = false;
 
