@@ -1,7 +1,8 @@
 'use strict';
 
-GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($translateProvider, $stateProvider,$urlRouterProvider,$locationProvider) {
+GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 'CodeInfo', function ($translateProvider, $stateProvider,$urlRouterProvider,$locationProvider,$httpProvider,CodeInfo) {
 
+    $httpProvider.defaults.headers.common['X-CSRF-TOKEN'] = CodeInfo.csrf_token;
     $urlRouterProvider.otherwise('/');
     $stateProvider
             .state('root', {

@@ -26,3 +26,16 @@ GenwebApp.directive('communityinfo', [function() {
         }]
     };
 }]);
+
+GenwebApp.value('CodeInfo', {
+    csrf_token: '',
+});
+
+GenwebApp.directive('codeinfo', [function() {
+    return {
+        restrict: 'E',
+        controller: ['$scope', '$element', '$attrs', 'CodeInfo', function($scope, $element, $attrs, CodeInfo) {
+            CodeInfo.csrf_token = $attrs.codeinfo;
+        }]
+    };
+}]);
