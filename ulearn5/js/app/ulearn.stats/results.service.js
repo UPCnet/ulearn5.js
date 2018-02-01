@@ -41,9 +41,12 @@
         ////////////////////
         function Search() {
             self.search_options.stats_requested = self.columns[self.search_type];
-            return $http.get(
-                        plonePortalURL + '/ulearn-stats-query',
-                        {params: self.search_options})
+            return $http({
+                    method: 'GET',
+                    url: plonePortalURL + '/ulearn-stats-query',
+                    params: self.search_options,
+                    headers: {'X-CSRF-TOKEN': CodeInfo.csrf_token}
+                    })
                     .then(function(response) {
                         return response.data;})
                     .catch(function () {
@@ -63,9 +66,12 @@
         }
 
         function DrillDown () {
-            return $http.get(
-                        plonePortalURL + '/ulearn-stats-query-drilldown',
-                        {params: angular.extend({}, self.search_options, self.drilldown_params)})
+            return $http({
+                    method: 'GET',
+                    url: plonePortalURL + '/ulearn-stats-query-drilldown',
+                    params: angular.extend({}, self.search_options, self.drilldown_params),
+                    headers: {'X-CSRF-TOKEN': CodeInfo.csrf_token}
+                    })
                     .then(function(response) {
                         return response.data;})
                     .catch(function () {

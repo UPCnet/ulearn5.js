@@ -19,9 +19,12 @@
 
         ////////////////////
         function Search(query) {
-          return $http.get(
-                        plonePortalURL + '/max.ajaxusersearch',
-                        {params: {q: query}})
+          return $http({
+                    method: 'GET',
+                    url: plonePortalURL + '/max.ajaxusersearch',
+                    params: {q: query},
+                    headers: {'X-CSRF-TOKEN': CodeInfo.csrf_token}
+                    })
                     .then(function(response) {
                         return response.data.results;})
                     .catch(function () {

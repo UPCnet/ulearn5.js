@@ -84,7 +84,7 @@
     "../ulearn5.theme/src/ulearn5/theme/portlets": "++ulearn++portlets"
   },
   "revision_info": {
-    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.3bc0022c.js",
-    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.90180fd6.js"
+    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.d2106ebd.js",
+    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.a6bf3ef0.js"
   }
 }

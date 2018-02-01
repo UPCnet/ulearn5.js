@@ -1,8 +1,7 @@
 'use strict';
 
-GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', 'CodeInfo', function ($translateProvider, $stateProvider,$urlRouterProvider,$locationProvider,$httpProvider,CodeInfo) {
+GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($translateProvider, $stateProvider,$urlRouterProvider,$locationProvider) {
 
-    $httpProvider.defaults.headers.common['X-CSRF-TOKEN'] = CodeInfo.csrf_token;
     $urlRouterProvider.otherwise('/');
     $stateProvider
             .state('root', {
@@ -28,8 +27,8 @@ GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', 
                 // When coming from stats route, shows again the right portlets
                 showrightportlets: function(){
                       angular.element('.homepage-hpm4').show()
-                      angular.element('.homepage-hpm3').addClass('span8')
-                      angular.element('.homepage-hpm3').removeClass('span12')
+                      angular.element('.homepage-hpm3').addClass('col-md-8')
+                      angular.element('.homepage-hpm3').removeClass('col-md-12')
                       return;
                   }
               },
@@ -47,8 +46,8 @@ GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', 
                 // When coming from stats route, shows again the right portlets
                 showrightportlets: function(){
                       angular.element('.homepage-hpm4').show()
-                      angular.element('.homepage-hpm3').addClass('span8')
-                      angular.element('.homepage-hpm3').removeClass('span12')
+                      angular.element('.homepage-hpm3').addClass('col-md-8')
+                      angular.element('.homepage-hpm3').removeClass('col-md-12')
                       return;
                   }
               },
@@ -66,8 +65,8 @@ GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', 
                 // When coming from stats route, shows again the right portlets
                 showrightportlets: function(){
                       angular.element('.homepage-hpm4').show()
-                      angular.element('.homepage-hpm3').addClass('span8')
-                      angular.element('.homepage-hpm3').removeClass('span12')
+                      angular.element('.homepage-hpm3').addClass('col-md-8')
+                      angular.element('.homepage-hpm3').removeClass('col-md-12')
                       return;
                   }
               },

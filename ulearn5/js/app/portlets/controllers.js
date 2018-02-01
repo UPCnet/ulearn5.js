@@ -18,24 +18,26 @@ GenwebApp.controller('profilePortletModal', ['$scope', '$http', '$timeout', '$wi
   $scope.selected = $scope.ngDialogData.community_type;
   $scope.changeCommunityType = function (selected) {
     var data = {community_type: selected};
-    $http.put(
-      plonePortalURL + '/api/communities/' + $scope.ngDialogData.community_hash,
-      data,
-      {headers:MAXInfo.headers})
-    .success(function() {
-      $scope.closeThisDialog();
-      $timeout(function () { $window.location.reload(); }, 700);
-    })
-    .error(function () {
-      $translate(['CHANGECOMMUNITYTYPE_VIEW.ERROR'])
-        .then(function (translations) {
-          SweetAlert.swal({
-            title:'Error',
-            description: translations['CHANGECOMMUNITYTYPE_VIEW.ERROR'],
-            type:'error',
-            timer: 2000});
+    $http({
+        method: 'PUT',
+        url: plonePortalURL + '/api/communities/' + $scope.ngDialogData.community_hash,
+        data: data,
+        headers: {'X-CSRF-TOKEN': CodeInfo.csrf_token} + MAXInfo.headers
+        })
+        .success(function() {
+          $scope.closeThisDialog();
+          $timeout(function () { $window.location.reload(); }, 700);
+        })
+        .error(function () {
+          $translate(['CHANGECOMMUNITYTYPE_VIEW.ERROR'])
+            .then(function (translations) {
+              SweetAlert.swal({
+                title:'Error',
+                description: translations['CHANGECOMMUNITYTYPE_VIEW.ERROR'],
+                type:'error',
+                timer: 2000});
+            });
         });
-    });
   };
 
 }]);
