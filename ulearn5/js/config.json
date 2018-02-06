@@ -7,7 +7,7 @@
           "../ulearn5.js/ulearn5/js/legacy/jsi18n.js",
           "../ulearn5.theme/src/ulearn5/theme/theme/assets/javascripts/bootstrap.min.js",
           "../ulearn5.js/ulearn5/js/components/alertify/alertify.js",
-          "../ulearn5.js/ulearn5/js/components/select2/dist/js/select2.js",
+          "../ulearn5.js/ulearn5/js/components/select2/dist/js/select2.full.js",
           "../ulearn5.js/ulearn5/js/components/handlebars/handlebars.js",
           "../ulearn5.js/ulearn5/js/components/typeahead.js/dist/typeahead.jquery.js",
           "../ulearn5.js/ulearn5/js/components/underscore/underscore.js",
@@ -84,7 +84,7 @@
     "../ulearn5.theme/src/ulearn5/theme/portlets": "++ulearn++portlets"
   },
   "revision_info": {
-    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.700d055c.js",
-    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.e318e777.js"
+    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.common.15e11449.js",
+    "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.js": "../ulearn5.theme/src/ulearn5/theme/theme/angular/dist/ulearn5.app.268a91e3.js"
   }
 }

@@ -204,4 +204,109 @@ $(document).ready(function (event) {
       $.post(dexterity_url + '/toggle_news_in_app');
     });
 
+    // Tags select2 field
+    $('#searchbytag').select2({
+        tags: [],
+        tokenSeparators: [","],
+        minimumInputLength: 1,
+        ajax: {
+            url: portal_url + '/getVocabulary?name=plone.app.vocabularies.Keywords&field=subjects',
+            data: function (term, page) {
+                return {
+                    query: term,
+                    page: page // page number
+                };
+            },
+            results: function (data, page) {
+                return data;
+            }
+        }
+    });
+
+    // Tags search
+    $('#searchbytag').on("change", function(e) {
+        var query = $('#searchinputcontent .searchInput').val();
+        var path = $(this).data().name;
+        var tags = $('#searchbytag').val();
+
+        $('.listingBar').hide();
+        $.get(path + '/search_filtered_content', { q: query, t: tags }, function(data) {
+            $('#tagslist').html(data);
+        });
+    });
+
+    // Content search
+    $('#searchinputcontent .searchInput').on('keyup', function(event) {
+        var query = $(this).val();
+        var path = $(this).data().name;
+        var tags = $('#searchbytag').val();
+        $('.listingBar').hide();
+        $.get(path + '/search_filtered_content', { q: query, t: tags }, function(data) {
+            $('#tagslist').html(data);
+        });
+    });
+
+
+    var liveSearch = function(data_url) {
+      return function findMatches(q, cb) {
+        $.get(data_url + '?q=' + q, function(data) {
+          window._gw_typeahead_last_result = data;
+          cb(data);
+        });
+
+      };
+    };
+
+    window._gw_typeahead_last_result = [];
+    var selector = '#gwsearch .typeahead';
+    var $typeahead_dom = $(selector);
+    $typeahead_dom.typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+    },
+    {
+      name: 'states',
+      displayKey: 'title',
+      source: liveSearch($typeahead_dom.attr('data-typeahead-url')),
+      templates: {
+        suggestion: Handlebars.compile('<a class="{{class}}" href="{{itemUrl}}">{{title}}</a>'),
+        empty: '<div class="tt-empty"><p>'+ _ulearn_i18n("No hi ha elements") + '<p></div>'
+      }
+    }).on("typeahead:datasetRendered", function(event) {
+      var $dropdown = $(this).parent().find('.tt-dropdown-menu');
+      var $separator = $dropdown.find('.tt-suggestion a.with-separator').parent();
+      var separator_css = {
+        "border-top": ' 1px solid rgba(0, 0, 0, 0.2)',
+        'background-color': "#f5f5f5",
+        "padding-top": "4px"
+      };
+
+      if ($separator.is(':first-child')) {
+        separator_css['border-top-left-radius']= "8px";
+        separator_css['border-top-right-radius']= "8px";
+        separator_css['border-top'] = "none";
+      }
+
+      $separator.css(separator_css);
+      $separator = $dropdown.find('.tt-suggestion a.with-background').parent();
+      $separator.css({'background-color': "#f5f5f5" });
+    })
+    .on("keyup", function(event) {
+        if (event.keyCode === 13) {
+            var text = $(this).val();
+            if (!_.findWhere(window._gw_typeahead_last_result, {'title': text})) {
+                window.location.href = $typeahead_dom.attr('data-search-url') + '?SearchableText=' + text;
+            }
+
+        }
+    })
+    .on("typeahead:selected", function(event, suggestion, dataset) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+        window.location.href = suggestion.itemUrl;
+
+    });
+
 });
