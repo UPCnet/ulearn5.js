@@ -6,7 +6,7 @@
     <div id="searchinputusers">
       <div class="input-append">
         <input ng-model="ctrl.query" ng-keyup="ctrl.searchby()"
-               class="searchInput" type="text" placeholder="{{'SEARCHUSERS.SEARCH' | translate}}" />
+               class="form-control searchInput" type="text" placeholder="{{'SEARCHUSERS.SEARCH' | translate}}" />
         <span class="add-on"><i class="fa fa-search"></i></span>
       </div>
     </div>
@@ -55,8 +55,8 @@
                     <h4><span>{{user.fullname}}</span><br />
                       <span class="usuari_petit">{{user.id}}</span></h4>
                   </a>
-                  <span ng-repeat="field in ctrl.properties">
                     <p class="queryable" ng-show="user[field['name']]">
+                      <span ng-repeat="field in ctrl.properties">
                         <a target="_blank" ng-if="(field['name'] === 'email')"
                            ng-href="mailto:{{user[field['name']]}}">
                           <i class="queryable {{field['icon']}}"></i>
