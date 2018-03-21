@@ -2,11 +2,16 @@
 
 This repo contains only the release version of the dirPagination module from my
 [angularUtils](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination) repo. The sole purpose of this repo is to allow for convenient 
-dependency management via Bower.
+dependency management via Bower, npm and other package managers.
 
 ## Documentation
 
 All documentation is also located in the [angularUtils project](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination).
+
+## Changelog
+
+Please see the [releases page](https://github.com/michaelbromley/angularUtils-pagination/releases) for details
+of each released version.
 
 ## Issues
 

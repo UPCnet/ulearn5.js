@@ -24,11 +24,10 @@ GenwebApp.controller('profilePortletModal', ['$scope', '$http', '$timeout', '$wi
         data: data,
         headers: {'X-CSRF-TOKEN': CodeInfo.csrf_token} + MAXInfo.headers
         })
-        .success(function() {
+        .then(function successCallback(response) {
           $scope.closeThisDialog();
           $timeout(function () { $window.location.reload(); }, 700);
-        })
-        .error(function () {
+        },function errorCallback(response) {
           $translate(['CHANGECOMMUNITYTYPE_VIEW.ERROR'])
             .then(function (translations) {
               SweetAlert.swal({

@@ -50,7 +50,7 @@ GenwebApp.controller('subscribeToOpenCommunity', ['_', 'CommunityInfo', 'CodeInf
                                     'X-CSRF-TOKEN': CodeInfo.csrf_token
                                 }
                             })
-                            .success(function () {
+                            .then(function successCallback(response) {
                                 SweetAlert.swal({
                                     title: translations['COMMUNITY_SUBSCRIBE.DONE'],
                                     type: 'success',
@@ -59,8 +59,7 @@ GenwebApp.controller('subscribeToOpenCommunity', ['_', 'CommunityInfo', 'CodeInf
                                 $timeout(function () {
                                     $window.location.reload();
                                 }, 700);
-                            })
-                            .error(function () {
+                            },function errorCallback(response) {
                                 SweetAlert.swal({
                                     title: translations['COMMUNITY_SUBSCRIBE.ERROR'],
                                     type: 'error',

@@ -15,7 +15,7 @@ define([
   BaseSelection.prototype.render = function () {
     var $selection = $(
       '<span class="select2-selection" role="combobox" ' +
-      'aria-autocomplete="list" aria-haspopup="true" aria-expanded="false">' +
+      ' aria-haspopup="true" aria-expanded="false">' +
       '</span>'
     );
 
@@ -98,7 +98,7 @@ define([
   BaseSelection.prototype._handleBlur = function (evt) {
     var self = this;
 
-    // This needs to be delayed as the actve element is the body when the tab
+    // This needs to be delayed as the active element is the body when the tab
     // key is pressed, possibly along with others.
     window.setTimeout(function () {
       // Don't trigger `blur` if the focus is still in the selection

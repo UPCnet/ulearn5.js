@@ -41,8 +41,7 @@
     "tag": "0.3.12",
     "commit": "ddca378288f6c3e1e4f1d585939aeeab16f646f1"
   },
-  "_source": "git://github.com/likeastore/ngDialog.git",
+  "_source": "https://github.com/likeastore/ngDialog.git",
   "_target": "~0.3.12",
-  "_originalSource": "ngDialog",
-  "_direct": true
+  "_originalSource": "ngDialog"
 }

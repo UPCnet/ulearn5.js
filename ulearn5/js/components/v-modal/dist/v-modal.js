@@ -1,6 +1,6 @@
 /**
  * vModal - Simple, flexible and beautiful modal dialogs in AngularJS
- * @version v1.3.4
+ * @version v1.3.7
  * @link http://lukaszwatroba.github.io/v-modal
  * @author Łukasz Wątroba <l@lukaszwatroba.com>
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -14,7 +14,8 @@
 // Config
 angular.module('vModal.config', [])
   .constant('modalConfig', {
-    containerSelector: 'body'
+    containerSelector: 'body',
+    closeOnEsc: true
   });
 
 
@@ -23,8 +24,6 @@ angular.module('vModal.directives', []);
 angular.module('vModal.services', []);
 angular.module('vModal',
   [
-    'ngAnimate',
-
     'vModal.config',
     'vModal.directives',
     'vModal.services'
@@ -96,42 +95,61 @@ angular.module('vModal.directives')
   .directive('vModal', vModalDirective);
 
 
-function vModalDirective () {
+function vModalDirective ($document, modalConfig) {
   return {
     restrict: 'AE',
     transclude: true,
     scope: {
-      closeMethod: '&?onclose'
+      close: '&?onclose'
     },
-    controller: function () {},
+    controller: angular.noop,
     link: function (scope, iElement, iAttrs, ctrl, transclude) {
       transclude(scope.$parent, function(clone) {
         iElement.append(clone);
       });
-			
-			scope.closeMethod = (angular.isFunction(scope.closeMethod)) ? scope.closeMethod : angular.noop;
 
-      function isClose (el) {
-        while (el.tagName !== 'V-CLOSE') {
-          el = el.parentNode;
-          if (!el) {
+			scope.close = (angular.isFunction(scope.close)) ? scope.close : angular.noop;
+
+      function hasParentElement (elem) {
+        while (elem.tagName !== 'V-CLOSE') {
+          elem = elem.parentNode;
+          if (!elem) {
             return false;
           }
         }
         return true;
       }
 
-      iElement.on('click', function (event) {
+      function modalClick (event) {
         var isBackdrop = (event.target.tagName === 'V-MODAL');
 
-        if (isBackdrop || isClose(event.target)) {
-          scope.$apply(function () { scope.closeMethod(); });
+        if (isBackdrop || hasParentElement(event.target, 'V-CLOSE')) {
+          scope.$apply(function () { scope.close(); });
         }
+      }
+      
+      function documentKeydown (event) {
+        if (!modalConfig.closeOnEsc) { return false; }
+        
+        if (event.keyCode === 27) {
+          scope.$apply(function () {
+            scope.close();
+          });
+        }
+      }
+
+      iElement.on('click', modalClick);
+      $document.on('keydown', documentKeydown);
+
+      scope.$on('$destroy', function () {
+        iElement.off('click', modalClick);
+        $document.off('keydown', documentKeydown);
       });
     }
   };
 }
 
+vModalDirective.$inject = ['$document', 'modalConfig'];
 
 /*
 * @license

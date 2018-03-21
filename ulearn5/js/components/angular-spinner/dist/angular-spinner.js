@@ -125,23 +125,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var spinner = new Spinner(opts).spin(target)
 	 */
 	;(function (root, factory) {
-
+	
 	  /* CommonJS */
 	  if (typeof module == 'object' && module.exports) module.exports = factory()
-
+	
 	  /* AMD module */
 	  else if (true) !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
+	
 	  /* Browser global */
 	  else root.Spinner = factory()
 	}(this, function () {
 	  "use strict"
-
+	
 	  var prefixes = ['webkit', 'Moz', 'ms', 'O'] /* Vendor prefixes */
 	    , animations = {} /* Animation rules keyed by their name */
 	    , useCssAnimations /* Whether to use CSS animations or setTimeout */
 	    , sheet /* A stylesheet to hold the @keyframe or VML rules. */
-
+	
 	  /**
 	   * Utility function to create elements. If no tag name is given,
 	   * a DIV is created. Optionally properties can be passed.
@@ -149,11 +149,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function createEl (tag, prop) {
 	    var el = document.createElement(tag || 'div')
 	      , n
-
+	
 	    for (n in prop) el[n] = prop[n]
 	    return el
 	  }
-
+	
 	  /**
 	   * Appends children and returns the parent.
 	   */
@@ -161,10 +161,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    for (var i = 1, n = arguments.length; i < n; i++) {
 	      parent.appendChild(arguments[i])
 	    }
-
+	
 	    return parent
 	  }
-
+	
 	  /**
 	   * Creates an opacity keyframe animation rule and returns its name.
 	   * Since most mobile Webkits have timing issues with animation-delay,
@@ -176,7 +176,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      , z = Math.max(1 - (1-alpha) / trail * (100-start), alpha)
 	      , prefix = useCssAnimations.substring(0, useCssAnimations.indexOf('Animation')).toLowerCase()
 	      , pre = prefix && '-' + prefix + '-' || ''
-
+	
 	    if (!animations[name]) {
 	      sheet.insertRule(
 	        '@' + pre + 'keyframes ' + name + '{' +
@@ -186,13 +186,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        (start+trail) % 100 + '%{opacity:' + alpha + '}' +
 	        '100%{opacity:' + z + '}' +
 	        '}', sheet.cssRules.length)
-
+	
 	      animations[name] = 1
 	    }
-
+	
 	    return name
 	  }
-
+	
 	  /**
 	   * Tries various vendor prefixes and returns the first supported property.
 	   */
@@ -200,7 +200,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var s = el.style
 	      , pp
 	      , i
-
+	
 	    prop = prop.charAt(0).toUpperCase() + prop.slice(1)
 	    if (s[prop] !== undefined) return prop
 	    for (i = 0; i < prefixes.length; i++) {
@@ -208,7 +208,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (s[pp] !== undefined) return pp
 	    }
 	  }
-
+	
 	  /**
 	   * Sets multiple style properties at once.
 	   */
@@ -216,10 +216,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    for (var n in prop) {
 	      el.style[vendor(el, n) || n] = prop[n]
 	    }
-
+	
 	    return el
 	  }
-
+	
 	  /**
 	   * Fills in default values.
 	   */
@@ -232,16 +232,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	    return obj
 	  }
-
+	
 	  /**
 	   * Returns the line color from the given string or array.
 	   */
 	  function getColor (color, idx) {
 	    return typeof color == 'string' ? color : color[idx % color.length]
 	  }
-
+	
 	  // Built-in defaults
-
+	
 	  var defaults = {
 	    lines: 12             // The number of lines to draw
 	  , length: 7             // The length of each line
@@ -264,15 +264,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  , hwaccel: false        // Whether to use hardware acceleration (might be buggy)
 	  , position: 'absolute'  // Element positioning
 	  }
-
+	
 	  /** The constructor */
 	  function Spinner (o) {
 	    this.opts = merge(o || {}, Spinner.defaults, defaults)
 	  }
-
+	
 	  // Global defaults that override the built-ins:
 	  Spinner.defaults = {}
-
+	
 	  merge(Spinner.prototype, {
 	    /**
 	     * Adds the spinner to the given target element. If this instance is already
@@ -281,11 +281,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 	    spin: function (target) {
 	      this.stop()
-
+	
 	      var self = this
 	        , o = self.opts
 	        , el = self.el = createEl(null, {className: o.className})
-
+	
 	      css(el, {
 	        position: o.position
 	      , width: 0
@@ -293,14 +293,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      , left: o.left
 	      , top: o.top
 	      })
-
+	
 	      if (target) {
 	        target.insertBefore(el, target.firstChild || null)
 	      }
-
+	
 	      el.setAttribute('role', 'progressbar')
 	      self.lines(el, self.opts)
-
+	
 	      if (!useCssAnimations) {
 	        // No CSS animation support, use setTimeout() instead
 	        var i = 0
@@ -310,12 +310,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	          , f = fps / o.speed
 	          , ostep = (1 - o.opacity) / (f * o.trail / 100)
 	          , astep = f / o.lines
-
+	
 	        ;(function anim () {
 	          i++
 	          for (var j = 0; j < o.lines; j++) {
 	            alpha = Math.max(1 - (i + (o.lines - j) * astep) % f * ostep, o.opacity)
-
+	
 	            self.opacity(el, j * o.direction + start, alpha, o)
 	          }
 	          self.timeout = self.el && setTimeout(anim, ~~(1000 / fps))
@@ -323,7 +323,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      return self
 	    }
-
+	
 	    /**
 	     * Stops and removes the Spinner.
 	     */
@@ -336,7 +336,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	      return this
 	    }
-
+	
 	    /**
 	     * Internal method that draws the individual lines. Will be overwritten
 	     * in VML fallback mode below.
@@ -345,7 +345,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var i = 0
 	        , start = (o.lines - 1) * (1 - o.direction) / 2
 	        , seg
-
+	
 	      function fill (color, shadow) {
 	        return css(createEl(), {
 	          position: 'absolute'
@@ -358,7 +358,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        , borderRadius: (o.corners * o.scale * o.width >> 1) + 'px'
 	        })
 	      }
-
+	
 	      for (; i < o.lines; i++) {
 	        seg = css(createEl(), {
 	          position: 'absolute'
@@ -367,13 +367,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        , opacity: o.opacity
 	        , animation: useCssAnimations && addAnimation(o.opacity, o.trail, start + i * o.direction, o.lines) + ' ' + 1 / o.speed + 's linear infinite'
 	        })
-
+	
 	        if (o.shadow) ins(seg, css(fill('#000', '0 0 4px #000'), {top: '2px'}))
 	        ins(el, ins(seg, fill(getColor(o.color, i), '0 0 1px rgba(0,0,0,.1)')))
 	      }
 	      return el
 	    }
-
+	
 	    /**
 	     * Internal method that adjusts the opacity of a single line.
 	     * Will be overwritten in VML fallback mode below.
@@ -381,24 +381,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	  , opacity: function (el, i, val) {
 	      if (i < el.childNodes.length) el.childNodes[i].style.opacity = val
 	    }
-
+	
 	  })
-
-
+	
+	
 	  function initVML () {
-
+	
 	    /* Utility function to create a VML tag */
 	    function vml (tag, attr) {
 	      return createEl('<' + tag + ' xmlns="urn:schemas-microsoft.com:vml" class="spin-vml">', attr)
 	    }
-
+	
 	    // No CSS transforms but VML support, add a CSS rule for VML elements:
 	    sheet.addRule('.spin-vml', 'behavior:url(#default#VML)')
-
+	
 	    Spinner.prototype.lines = function (el, o) {
 	      var r = o.scale * (o.length + o.width)
 	        , s = o.scale * 2 * r
-
+	
 	      function grp () {
 	        return css(
 	          vml('group', {
@@ -408,11 +408,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        , { width: s, height: s }
 	        )
 	      }
-
+	
 	      var margin = -(o.width + o.length) * o.scale * 2 + 'px'
 	        , g = css(grp(), {position: 'absolute', top: margin, left: margin})
 	        , i
-
+	
 	      function seg (i, dx, filter) {
 	        ins(
 	          g
@@ -434,16 +434,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	          )
 	        )
 	      }
-
+	
 	      if (o.shadow)
 	        for (i = 1; i <= o.lines; i++) {
 	          seg(i, -2, 'progid:DXImageTransform.Microsoft.Blur(pixelradius=2,makeshadow=1,shadowopacity=.3)')
 	        }
-
+	
 	      for (i = 1; i <= o.lines; i++) seg(i)
 	      return ins(el, g)
 	    }
-
+	
 	    Spinner.prototype.opacity = function (el, i, val, o) {
 	      var c = el.firstChild
 	      o = o.shadow && o.lines || 0
@@ -453,22 +453,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	  }
-
+	
 	  if (typeof document !== 'undefined') {
 	    sheet = (function () {
 	      var el = createEl('style', {type : 'text/css'})
 	      ins(document.getElementsByTagName('head')[0], el)
 	      return el.sheet || el.styleSheet
 	    }())
-
+	
 	    var probe = css(createEl('group'), {behavior: 'url(#default#VML)'})
-
+	
 	    if (!vendor(probe, 'transform') && probe.adj) initVML()
 	    else useCssAnimations = vendor(probe, 'animation')
 	  }
-
+	
 	  return Spinner
-
+	
 	}));
 
 

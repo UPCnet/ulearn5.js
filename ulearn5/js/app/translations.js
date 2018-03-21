@@ -2,6 +2,7 @@
 
 GenwebApp.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', '$locationProvider', function ($translateProvider, $stateProvider,$urlRouterProvider,$locationProvider) {
 
+    $locationProvider.hashPrefix('');
     $urlRouterProvider.otherwise('/');
     $stateProvider
             .state('root', {

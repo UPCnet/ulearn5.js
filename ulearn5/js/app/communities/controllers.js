@@ -75,10 +75,9 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
                     'X-CSRF-TOKEN': CodeInfo.csrf_token
                 }
             })
-            .success(function (response) {
+            .then(function successCallback(response) {
                 community.favorited = !community.favorited;
-            })
-            .error(function (response) {
+            },function errorCallback(response) {
                 $translate(['ALLCOMMUNITIES_VIEW.FAVORITEDERROR'])
                     .then(function (translations) {
                         SweetAlert.swal({
@@ -116,15 +115,14 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
                                         'X-CSRF-TOKEN': CodeInfo.csrf_token
                                     }
                                 })
-                                .success(function (response) {
+                                .then(function successCallback(response) {
                                     self.user_subscriptions.push(community.url);
                                     SweetAlert.swal({
                                         title: translations['COMMUNITY_SUBSCRIBE.DONE'],
                                         type: 'success',
                                         timer: 2000
                                     });
-                                })
-                                .error(function (response) {
+                                },function errorCallback(response) {
                                     $translate(['ALLCOMMUNITIES_VIEW.SUBSCRIBEERROR'])
                                         .then(function (translations) {
                                             SweetAlert.swal({
@@ -165,7 +163,7 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
                                         'X-CSRF-TOKEN': CodeInfo.csrf_token
                                     }
                                 })
-                                .success(function (response) {
+                                .then(function successCallback(response) {
                                     self.user_subscriptions.pop(community.url);
                                     community.favorited = false;
                                     SweetAlert.swal({
@@ -173,8 +171,7 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
                                         type: 'success',
                                         timer: 2000
                                     });
-                            ºº    })
-                                .error(function (response) {
+                                },function errorCallback(response) {
                                     $translate(['ALLCOMMUNITIES_VIEW.UNSUBSCRIBEERROR'])
                                         .then(function (translations) {
                                             SweetAlert.swal({
@@ -216,7 +213,7 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
                                         'X-CSRF-TOKEN': CodeInfo.csrf_token
                                     }
                                 })
-                                .success(function () {
+                                .then(function successCallback(response) {
                                     SweetAlert.swal({
                                         title: translations['ALLCOMMUNITIES_VIEW.DELETEDONE'],
                                         type: 'success',
@@ -226,8 +223,7 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
                                     self.communities = _.without(self.communities, _.findWhere(self.communities, {
                                         url: community.url
                                     }));
-                                })
-                                .error(function () {
+                                },function errorCallback(response) {
                                     SweetAlert.swal({
                                         title: translations['ALLCOMMUNITIES_VIEW.DELETEERROR'],
                                         type: 'error',

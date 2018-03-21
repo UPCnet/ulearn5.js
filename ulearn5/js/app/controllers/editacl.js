@@ -80,19 +80,19 @@ GenwebApp.controller('uLearnEditACL', ['$http', 'CodeInfo', 'plonePortalURL', 'M
     self.selectUser = function ($item, $model, $select) {
         $item.role = 'reader';
         self.users.push($item);
-        $select.search = '';
     };
     self.selectGroup = function ($item, $model, $select) {
         $item.role = 'reader';
         self.groups.push($item);
-        $select.search = '';
     };
     self.deleteUser = function ($item) {
+        document.getElementById($item.id).remove()
         self.users = _.without(self.users, _.findWhere(self.users, {
             id: $item.id
         }));
     };
     self.deleteGroup = function ($item) {
+        document.getElementById($item.id).remove()
         self.groups = _.without(self.groups, _.findWhere(self.groups, {
             id: $item.id
         }));
@@ -104,10 +104,9 @@ GenwebApp.controller('uLearnEditACL', ['$http', 'CodeInfo', 'plonePortalURL', 'M
                 data: {users: self.users, groups: self.groups},
                 headers: {'X-CSRF-TOKEN': CodeInfo.csrf_token} + MAXInfo.headers
             })
-            .success(function () {
+            .then(function successCallback(response) {
                 $window.location = self.community_url;
-            })
-            .error(function () {
+            },function errorCallback(response) {
                 $translate(['EDITACL_VIEW.DESCRIPTION'])
                     .then(function (translations) {
                         SweetAlert.swal({
