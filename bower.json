@@ -16,7 +16,7 @@
     "angular-ui-router": "^1.0.15",
     "angular-ui-select": "~0.19.8",
     "selectize": "~0.12.0",
-    "ui-select": "angular-ui-select#~0.12.1",
+    "ui-select": "angular-ui-select#~0.19.8",
     "angular-datatables": "~0.4.0",
     "angular-maxclient": "git@github.com:/UPCnet/angular-maxclient.git",
     "ngDialog": "~0.3.12",

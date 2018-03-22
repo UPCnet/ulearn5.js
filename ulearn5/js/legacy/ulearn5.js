@@ -257,7 +257,7 @@ $(document).ready(function (event) {
       };
     };
 
-    window._gw_typeahead_last_result = [];
+  /*  window._gw_typeahead_last_result = [];
     var selector = '#gwsearch .typeahead';
     var $typeahead_dom = $(selector);
     $typeahead_dom.typeahead({
@@ -307,6 +307,6 @@ $(document).ready(function (event) {
         event.stopImmediatePropagation();
         window.location.href = suggestion.itemUrl;
 
-    });
+    });*/
 
 });
