@@ -41,10 +41,15 @@ GenwebApp.controller('profilePortletModal', ['$scope', '$http', '$timeout', '$wi
 
 }]);
 
-GenwebApp.controller('homeTopPageMenuButtons', ['ngDialog', function (ngDialog) {
+GenwebApp.controller('homeTopPageMenuButtons', ['ngDialog', 'plonePortalURL', '$http', function (ngDialog, plonePortalURL, $http) {
   var self = this;
-  self.active_tab = 'stream';
-
+  self.prom_appconfig = $http.get(plonePortalURL+'/api/appconfig')
+    .then(function (response) {
+      // All the visible communities for the current user (Open and Closed) used
+      // in the iterator of the allcommunities view
+      self.active_tab = response.data.buttonbar_selected;
+    }
+  );
 }]);
 
 GenwebApp.controller('homeTopPageMenuButtonsCA', ['ngDialog', '$scope', function (ngDialog, $scope) {
