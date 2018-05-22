@@ -180,30 +180,6 @@ $(document).ready(function (event) {
         };
     };
 
-    // Toggle Flash in Dexterity Objects
-    $('#toggle-flash').on('click', '.sliderbutton', function(event) {
-      var dexterity_url = $(this).data()['dextobject'];
-      $.post(dexterity_url + '/toggle_flash');
-    });
-
-    // Toggle Important in Dexterity Objects
-    $('#toggle-important').on('click', '.sliderbutton', function(event) {
-      var dexterity_url = $(this).data()['dextobject'];
-      $.post(dexterity_url + '/toggle_important');
-    });
-
-    // Toggle List in Dexterity Objects
-    $('#toggle-outoflist').on('click', '.sliderbutton', function(event) {
-      var dexterity_url = $(this).data()['dextobject'];
-      $.post(dexterity_url + '/toggle_outoflist');
-    });
-
-    // Toggle News in App in Dexterity News Items
-    $('#toggle-newsinapp').on('click', '.sliderbutton', function(event) {
-      var dexterity_url = $(this).data()['dextobject'];
-      $.post(dexterity_url + '/toggle_news_in_app');
-    });
-
     // Tags select2 field
     $('#searchbytag').select2({
         tags: [],
