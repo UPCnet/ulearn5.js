@@ -1,4 +1,4 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: ulearn5.js
 Version: 0.1
 Summary: uLearn ECMAScript dedicated package
@@ -6,7 +6,6 @@ Home-page: https://github.com/UPCnet/ulearn5.js
 Author: PloneTeam
 Author-email: ploneteam@upcnet.es
 License: GPL
-Description-Content-Type: UNKNOWN
 Description: ====================
         ulearn5.js
         ====================
@@ -38,8 +37,25 @@ Description: ====================
         2.40 (unreleased)
         -----------------
         
-        - Nothing changed yet.
-        
+        * New build [alberto.duran]
+        * Remove duplicated posts for Gestio Noticies [alberto.duran]
+        * Select the active button in the button bar [Pilar Marinas]
+        * Solucionar visualización folder_contents nuevo angular 1.6.9 [Pilar Marinas]
+        * Migracion nueva version angular 1.6.9 [Pilar Marinas]
+        * Update searchusers.html [root@comunitatsdevel]
+        * Update with select2 for documentsview [alberto.duran]
+        * Add codeinfo in controllers [Pilar Marinas]
+        * Update methods post,get,put and delete for codeinfo [alberto.duran]
+        * token favorite [alberto.duran]
+        * Update bootstrap in searchusers [root@comunitatsdevel]
+        * Remove old js [alberto.duran]
+        * update badges [alberto.duran]
+        * Security sanitize added and avatar_default moved [alberto.duran]
+        * Update Resource Filesystems (++xxx++yyy) [alberto.duran]
+        * Fer funcionar AngularJS [alberto.duran]
+        * add angular xxx [alberto.duran]
+        * First migrated version [alberto.duran]
+        * Initial commit [Alberto Duran]
         
         2.39 (2017-11-21)
         -----------------
@@ -320,3 +336,4 @@ Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 2.6
 Classifier: Programming Language :: Python :: 2.7
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: test

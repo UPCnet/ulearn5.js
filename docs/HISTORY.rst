@@ -1,11 +1,28 @@
 Changelog
 =========
 
-2.40 (unreleased)
------------------
+0.1 (2018-05-22)
+----------------
 
-- Nothing changed yet.
-
+* New build [alberto.duran]
+* Remove duplicated posts for Gestio Noticies [alberto.duran]
+* Select the active button in the button bar [Pilar Marinas]
+* Solucionar visualización folder_contents nuevo angular 1.6.9 [Pilar Marinas]
+* Migracion nueva version angular 1.6.9 [Pilar Marinas]
+* Update searchusers.html [root@comunitatsdevel]
+* Update with select2 for documentsview [alberto.duran]
+* Add codeinfo in controllers [Pilar Marinas]
+* Update methods post,get,put and delete for codeinfo [alberto.duran]
+* token favorite [alberto.duran]
+* Update bootstrap in searchusers [root@comunitatsdevel]
+* Remove old js [alberto.duran]
+* update badges [alberto.duran]
+* Security sanitize added and avatar_default moved [alberto.duran]
+* Update Resource Filesystems (++xxx++yyy) [alberto.duran]
+* Fer funcionar AngularJS [alberto.duran]
+* add angular xxx [alberto.duran]
+* First migrated version [alberto.duran]
+* Initial commit [Alberto Duran]
 
 2.39 (2017-11-21)
 -----------------
