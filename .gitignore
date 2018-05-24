@@ -5,6 +5,8 @@ __pycache__/
 *$py.class
 *.pyc
 package-lock.json
+ulearn5/js/components/angular-ui-select/package.json
+ulearn5/js/components/sifter/package.json
 .tmp/
 
 # C extensions
