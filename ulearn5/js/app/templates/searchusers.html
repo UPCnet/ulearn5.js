@@ -1,28 +1,26 @@
-<div id="communitysearch" ng-cloak>
+<div id="communitysearch" data-ng-cloak>
 
-    <h2>{{'SEARCHUSERS.THINNKERS' | translate}}
-    </h2>
+    <h2>{{'SEARCHUSERS.THINNKERS' | translate}}</h2>
 
     <div id="searchinputusers">
       <div class="input-append">
-        <input ng-model="ctrl.query" ng-keyup="ctrl.searchby()"
+        <input data-ng-model="ctrl.query" data-ng-keyup="ctrl.searchby()"
                class="form-control searchInput" type="text" placeholder="{{'SEARCHUSERS.SEARCH' | translate}}" />
         <span class="add-on"><i class="fa fa-search"></i></span>
       </div>
     </div>
 
     <div id="subscribealert" class="alert alert-info" role="alert">
-        <button data-dismiss="alert" class="close" type="button">×</button>
-        <p>
-        <tal:msg>{{'SEARCHUSERS.USE_THE_SEARCH_INPUT_TO_FIND_MORE_PEOPLE1' | translate}}
-        </tal:msg>
-        <span ng-if="ctrl.users.big === true">
-            <tal:msg>{{'SEARCHUSERS.USE_THE_SEARCH_INPUT_TO_FIND_MORE_PEOPLE2' | translate}} </tal:msg>
-            <span>{{ctrl.users.length}}</span>
-            <tal:msg>{{'SEARCHUSERS.PEOPLE' | translate}} </tal:msg>
-        </span>
-        </p>
-      </div>
+      <button data-dismiss="alert" class="close" type="button">×</button>
+      <p>
+      <tal:msg>{{'SEARCHUSERS.USE_THE_SEARCH_INPUT_TO_FIND_MORE_PEOPLE1' | translate}}</tal:msg>
+      <span data-ng-if="ctrl.users.big === true">
+          <tal:msg>{{'SEARCHUSERS.USE_THE_SEARCH_INPUT_TO_FIND_MORE_PEOPLE2' | translate}} </tal:msg>
+          <span>{{ctrl.users.length}}</span>
+          <tal:msg>{{'SEARCHUSERS.PEOPLE' | translate}} </tal:msg>
+      </span>
+      </p>
+    </div>
 
     <div class="pagination">
       <dir-pagination-controls boundary-links="true" template-url="++components++ulearn/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
@@ -30,59 +28,53 @@
 
     <section id="userlist">
 
-      <div ng-if="ctrl.users.big === true">
-        <div dir-paginate="user in ctrl.users.content | itemsPerPage: ctrl.pageSize" current-page="ctrl.currentPage" ng-cloak>
+      <div data-ng-if="ctrl.users.big === true">
+        <div data-dir-paginate="user in ctrl.users.content | itemsPerPage: ctrl.pageSize" data-current-page="ctrl.currentPage" data-ng-cloak>
           <div class="directori_usuari_foto">
-            <a ng-href="{{user.url}}" ng-bind-html="user.foto">
-            </a>
+            <a data-ng-href="{{user.url}}" data-ng-bind-html="user.foto"></a>
           </div>
         </div>
       </div>
 
-      <div ng-if="ctrl.users.big === false">
-        <ul class="sortablelist"
-          ng-if="ctrl.users.length > 0">
-          <span dir-paginate="user in ctrl.users.content | itemsPerPage: ctrl.pageSize" current-page="ctrl.currentPage" ng-cloak>
+      <div data-ng-if="ctrl.users.big === false">
+        <ul class="sortablelist" data-ng-if="ctrl.users.length > 0">
+          <span data-dir-paginate="user in ctrl.users.content | itemsPerPage: ctrl.pageSize" data-current-page="ctrl.currentPage" data-ng-cloak>
             <li class="mix">
               <div class="row">
-
                 <div class="col-md-3">
-                  <a class="photo" ng-href="{{user.url}}" ng-bind-html="user.foto"></a>
+                  <a class="photo" data-ng-href="{{user.url}}" data-ng-bind-html="user.foto"></a>
                 </div>
-
                 <div class="col-md-9">
-                  <a ng-href="{{user.url}}">
-                    <h4><span>{{user.fullname}}</span><br />
-                      <span class="usuari_petit">{{user.id}}</span></h4>
+                  <a data-ng-href="{{user.url}}">
+                    <h4><span>{{user.fullname}}</span><br/>
+                      <span class="usuari_petit">{{user.id}}</span>
+                    </h4>
                   </a>
-                    <p class="queryable" ng-show="user[field['name']]">
-                      <span ng-repeat="field in ctrl.properties">
-                        <a target="_blank" ng-if="(field['name'] === 'email')"
-                           ng-href="mailto:{{user[field['name']]}}">
-                          <i class="queryable {{field['icon']}}"></i>
-                        </a>
-                      <span ng-if="(field['name'] != 'email')">
-                         <i class="queryable {{field['icon']}}" ng-click="ctrl.searchby(user[field['name']])"></i>
-                      </span>
-                      <span ng-if="(field['name'] == 'collectiveFaculty')">
-                        {{ getFacultyLabel(user[field['name']]) }}
-                      </span>
-                      <span ng-if="(field['name'] != 'collectiveFaculty')">
-                        {{ user[field['name']] }}
-                      </span>
-                    </p>
-                  </span>
+                  <p class="queryable" data-ng-show="user[field['name']]">
+                    <span data-ng-repeat="field in ctrl.properties">
+                      <a target="_blank" data-ng-if="(field['name'] === 'email')"
+                         data-ng-href="mailto:{{user[field['name']]}}">
+                        <i class="queryable {{field['icon']}}"></i>
+                      </a>
+                    </span>
+                    <span data-ng-if="(field['name'] != 'email')">
+                       <i class="queryable {{field['icon']}}" data-ng-click="ctrl.searchby(user[field['name']])"></i>
+                    </span>
+                    <span data-ng-if="(field['name'] == 'collectiveFaculty')">
+                      {{ getFacultyLabel(user[field['name']]) }}
+                    </span>
+                    <span data-ng-if="(field['name'] != 'collectiveFaculty')">
+                      {{ user[field['name']] }}
+                    </span>
+                  </p>
                 </div>
-
               </div>
             </li>
           </span>
         </ul>
       </div>
 
-     <div class="clearfix" ng-if="ctrl.users.big === true">
-     </div>
-
+     <div class="clearfix" data-ng-if="ctrl.users.big === true"></div>
 
     </section>
     <div class="pagination">
