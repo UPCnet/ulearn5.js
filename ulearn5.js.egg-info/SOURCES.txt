@@ -1840,7 +1840,6 @@ ulearn5/js/components/angular-ui-select/bower.json
 ulearn5/js/components/angular-ui-select/composer.json
 ulearn5/js/components/angular-ui-select/deploy-docs.sh
 ulearn5/js/components/angular-ui-select/index.js
-ulearn5/js/components/angular-ui-select/package.json
 ulearn5/js/components/angular-ui-select/dist/select.css
 ulearn5/js/components/angular-ui-select/dist/select.js
 ulearn5/js/components/angular-ui-select/dist/select.min.css
@@ -5950,7 +5949,6 @@ ulearn5/js/components/sifter/.gitignore
 ulearn5/js/components/sifter/.npmignore
 ulearn5/js/components/sifter/README.md
 ulearn5/js/components/sifter/bower.json
-ulearn5/js/components/sifter/package.json
 ulearn5/js/components/sifter/sifter.js
 ulearn5/js/components/sifter/sifter.min.js
 ulearn5/js/components/spin.js/.bower.json

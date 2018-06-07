@@ -34,8 +34,8 @@ Description: ====================
         Changelog
         =========
         
-        2.40 (unreleased)
-        -----------------
+        0.1 (2018-05-22)
+        ----------------
         
         * New build [alberto.duran]
         * Remove duplicated posts for Gestio Noticies [alberto.duran]
