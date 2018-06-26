@@ -1,11 +1,12 @@
-Metadata-Version: 2.1
+Metadata-Version: 1.1
 Name: ulearn5.js
-Version: 0.2
+Version: 0.3.dev0
 Summary: uLearn ECMAScript dedicated package
 Home-page: https://github.com/UPCnet/ulearn5.js
 Author: PloneTeam
 Author-email: ploneteam@upcnet.es
 License: GPL
+Description-Content-Type: UNKNOWN
 Description: ====================
         ulearn5.js
         ====================
@@ -33,6 +34,12 @@ Description: ====================
         
         Changelog
         =========
+        
+        0.3 (unreleased)
+        ----------------
+        
+        - Nothing changed yet.
+        
         
         0.2 (2018-06-07)
         ----------------
@@ -336,4 +343,3 @@ Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 2.6
 Classifier: Programming Language :: Python :: 2.7
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
-Provides-Extra: test

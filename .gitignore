@@ -11,7 +11,7 @@ ulearn5/js/components/sifter/package.json
 
 # C extensions
 *.so
-
+ulearn5.js.egg-info/PKG-INFO
 # Distribution / packaging
 .Python
 env/
