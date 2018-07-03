@@ -1,11 +1,10 @@
 Changelog
 =========
 
-0.3 (unreleased)
+0.3 (2018-07-03)
 ----------------
 
-- Nothing changed yet.
-
+* Update js for gestio noticies [alberto.duran]
 
 0.2 (2018-06-07)
 ----------------

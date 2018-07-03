@@ -6,7 +6,6 @@ Home-page: https://github.com/UPCnet/ulearn5.js
 Author: PloneTeam
 Author-email: ploneteam@upcnet.es
 License: GPL
-Description-Content-Type: UNKNOWN
 Description: ====================
         ulearn5.js
         ====================
@@ -38,8 +37,7 @@ Description: ====================
         0.3 (unreleased)
         ----------------
         
-        - Nothing changed yet.
-        
+        * Update js for gestio noticies [alberto.duran]
         
         0.2 (2018-06-07)
         ----------------
