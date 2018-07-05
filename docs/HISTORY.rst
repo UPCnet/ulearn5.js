@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.4 (unreleased)
+0.4 (2018-07-05)
 ----------------
 
-- Nothing changed yet.
-
+* Cambiar orden sweetalert [alberto.duran]
+* Recuperar fichero [alberto.duran]
 
 0.3 (2018-07-03)
 ----------------
