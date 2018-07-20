@@ -46,27 +46,25 @@
                 </div>
                 <div class="col-md-9">
                   <a data-ng-href="{{user.url}}">
-                    <h4><span>{{user.fullname}}</span><br/>
-                      <span class="usuari_petit">{{user.id}}</span>
-                    </h4>
+                    <h3><span>{{user.fullname}}</span> <span class="usuari_petit">{{user.id}}</span></h3>
                   </a>
-                  <p class="queryable" data-ng-show="user[field['name']]">
-                    <span data-ng-repeat="field in ctrl.properties">
-                      <a target="_blank" data-ng-if="(field['name'] === 'email')"
-                         data-ng-href="mailto:{{user[field['name']]}}">
-                        <i class="queryable {{field['icon']}}"></i>
-                      </a>
-                    </span>
-                    <span data-ng-if="(field['name'] != 'email')">
-                       <i class="queryable {{field['icon']}}" data-ng-click="ctrl.searchby(user[field['name']])"></i>
-                    </span>
-                    <span data-ng-if="(field['name'] == 'collectiveFaculty')">
-                      {{ getFacultyLabel(user[field['name']]) }}
-                    </span>
-                    <span data-ng-if="(field['name'] != 'collectiveFaculty')">
-                      {{ user[field['name']] }}
-                    </span>
-                  </p>
+                  <span data-ng-repeat="field in ctrl.properties">
+                    <p class="queryable" data-ng-show="user[field['name']]">
+                        <a target="_blank" data-ng-if="(field['name'] === 'email')"
+                           data-ng-href="mailto:{{user[field['name']]}}">
+                          <i class="queryable {{field['icon']}}"></i>
+                        </a>
+                      <span data-ng-if="(field['name'] != 'email')">
+                         <i class="queryable {{field['icon']}}" data-ng-click="ctrl.searchby(user[field['name']])"></i>
+                      </span>
+                      <span data-ng-if="(field['name'] == 'collectiveFaculty')">
+                        {{ getFacultyLabel(user[field['name']]) }}
+                      </span>
+                      <span data-ng-if="(field['name'] != 'collectiveFaculty')">
+                        {{ user[field['name']] }}
+                      </span>
+                    </p>
+                  </span>
                 </div>
               </div>
             </li>
