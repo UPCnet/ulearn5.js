@@ -1,11 +1,10 @@
 Changelog
 =========
 
-0.5 (unreleased)
+0.5 (2018-10-11)
 ----------------
 
-- Nothing changed yet.
-
+* Solucion a no ver los datos de los usuarios. [iago.lopez]
 
 0.4 (2018-07-05)
 ----------------

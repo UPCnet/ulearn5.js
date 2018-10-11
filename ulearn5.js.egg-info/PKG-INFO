@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 1.1
 Name: ulearn5.js
-Version: 0.4
+Version: 0.5.dev0
 Summary: uLearn ECMAScript dedicated package
 Home-page: https://github.com/UPCnet/ulearn5.js
 Author: PloneTeam
@@ -33,6 +33,11 @@ Description: ====================
         
         Changelog
         =========
+        
+        0.5 (unreleased)
+        ----------------
+        
+        * Solucion a no ver los datos de los usuarios. [iago.lopez]
         
         0.4 (2018-07-05)
         ----------------
@@ -347,4 +352,3 @@ Classifier: Programming Language :: Python
 Classifier: Programming Language :: Python :: 2.6
 Classifier: Programming Language :: Python :: 2.7
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
-Provides-Extra: test
