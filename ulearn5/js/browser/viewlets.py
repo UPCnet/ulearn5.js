@@ -1,6 +1,6 @@
 from five import grok
 from zope.interface import Interface
-from base5.core.browser.viewlets import gwJSViewletManager
+from base5.core.browser.viewlets import baseJSViewletManager
 from base5.core.browser.viewlets import baseResourcesViewlet
 from ulearn5.theme.interfaces import IUlearn5ThemeLayer
 from plone import api
@@ -17,7 +17,7 @@ class gwJSViewlet(baseResourcesViewlet):
 
 # class gwJSDevelViewlet(grok.Viewlet):
 #     grok.context(Interface)
-#     grok.viewletmanager(gwJSViewletManager)
+#     grok.viewletmanager(baseJSViewletManager)
 #     grok.layer(IUlearn5ThemeLayer)
 
 #     def is_devel_mode(self):
@@ -26,7 +26,7 @@ class gwJSViewlet(baseResourcesViewlet):
 
 # class gwJSProductionViewlet(grok.Viewlet):
 #     grok.context(Interface)
-#     grok.viewletmanager(gwJSViewletManager)
+#     grok.viewletmanager(baseJSViewletManager)
 #     grok.layer(IUlearn5ThemeLayer)
 
 #     def is_devel_mode(self):
