@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.6 (unreleased)
+0.6 (2018-10-29)
 ----------------
 
-- Nothing changed yet.
-
+* Personalizar limit lastauthors [iago.lopez]
+* Quitar Genweb [Pilar Marinas]
 
 0.5 (2018-10-11)
 ----------------
