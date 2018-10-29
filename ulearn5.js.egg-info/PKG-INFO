@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: ulearn5.js
-Version: 0.6.dev0
+Version: 0.6
 Summary: uLearn ECMAScript dedicated package
 Home-page: https://github.com/UPCnet/ulearn5.js
 Author: PloneTeam
@@ -34,7 +34,7 @@ Description: ====================
         Changelog
         =========
         
-        0.6 (unreleased)
+        0.6 (2018-10-29)
         ----------------
         
         * Personalizar limit lastauthors [iago.lopez]
