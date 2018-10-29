@@ -64,10 +64,14 @@ GenwebApp.directive('lastauthors', [function() {
       controller: ['$scope', '$element', '$attrs', 'plonePortalURL', 'MAXInfo', 'TimelineLastAuthors', 'ContextLastAuthors', function($scope, $element, $attrs, plonePortalURL, MAXInfo, TimelineLastAuthors, ContextLastAuthors) {
         $scope.portal_url = plonePortalURL;
         $scope.url_max_server = MAXInfo.max_server;
+        var limit = 8;
+        if (jQuery('#box_thinkers[data-limit]').length > 0){
+          limit = jQuery('#box_thinkers[data-limit]').attr('data-limit');
+        }
         if ($attrs.type === 'timeline') {
-          $scope.last_authors = TimelineLastAuthors.query({username: MAXInfo.username, limit: 8});
+          $scope.last_authors = TimelineLastAuthors.query({username: MAXInfo.username, limit: limit});
         } else {
-          $scope.last_authors = ContextLastAuthors.query({hash: $attrs.communityHash, limit: 8});
+          $scope.last_authors = ContextLastAuthors.query({hash: $attrs.communityHash, limit: limit});
         }
       }]
     };
