@@ -67,7 +67,13 @@
                 'ENDDATE': 'End date',
                 'EXPORT': 'Export',
                 'CANCELA': 'Cancel',
-                'INFO': 'Daily Information'
+                'INFO': 'Daily Information',
+                'COMMUNITIES': 'Community',
+                'PAGE': 'Page',
+                'TITLE': 'Title',
+                'TYPE': 'Type',
+                'DATE': 'Date',
+                'PAGEVIEWS': 'Page views'
             }
         });
 
@@ -128,7 +134,13 @@
                 'ENDDATE': 'Fecha de fin',
                 'EXPORT': 'Exporta',
                 'CANCELA': 'Cancela',
-                'INFO': 'Acceso a información diaria'
+                'INFO': 'Acceso a información diaria',
+                'COMMUNITIES': 'Comunidad',
+                'PAGE': 'Página',
+                'TITLE': 'Título',
+                'TYPE': 'Tipo',
+                'DATE': 'Fecha',
+                'PAGEVIEWS': 'Nº Visitas'
             }
         });
 
@@ -194,6 +206,7 @@
                 'PAGE': 'Pàgina',
                 'TITLE': 'Títol',
                 'TYPE': 'Tipus',
+                'DATE': 'Data',
                 'PAGEVIEWS': 'Nº Visites'
             }
         });
