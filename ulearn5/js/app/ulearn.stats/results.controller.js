@@ -22,9 +22,12 @@
         function ShowResults () {
             self.show = ResultsService.show_results;
             self.column_headers = ResultsService.buildColumns();
-            ResultsService.search().then(function (response) {
-                self.results = response.rows;
-            });
+            if (self.column_headers != 'page' && self.column_headers != 'communities' &&  self.column_headers != 'title' &&  self.column_headers != 'type' ){
+
+                ResultsService.search().then(function (response) {
+                   self.results = response.rows;
+                });
+            }
         }
 
         function ShowModal (params) {

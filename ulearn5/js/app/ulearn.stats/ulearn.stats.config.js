@@ -35,6 +35,11 @@
               url: '/chats',
               templateUrl: '++app++ulearn/ulearn.stats/templates/chats.html',
               controller: 'StatsController as statsctrl'
+            })
+            .state('stats.pageviews', {
+              url: '/pageviews',
+              templateUrl: '++app++ulearn/ulearn.stats/templates/pageviews.html',
+              controller: 'StatsController as statsctrl'
             });
     }
 })();

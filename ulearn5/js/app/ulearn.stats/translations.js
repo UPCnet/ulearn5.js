@@ -189,7 +189,12 @@
                 'ENDDATE': 'Data de fi',
                 'EXPORT': 'Exporta',
                 'CANCELA': 'Cancel·la',
-                'INFO': 'Accés a informació diària'
+                'INFO': 'Accés a informació diària',
+                'COMMUNITIES': 'Comunitat',
+                'PAGE': 'Pàgina',
+                'TITLE': 'Títol',
+                'TYPE': 'Tipus',
+                'PAGEVIEWS': 'Nº Visites'
             }
         });
         // $translateProvider.preferredLanguage('en');

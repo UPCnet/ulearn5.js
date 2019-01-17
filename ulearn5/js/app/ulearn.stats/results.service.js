@@ -31,6 +31,7 @@
         self.columns = {
             activity: ['activity', 'comments', 'documents', 'links', 'media'],
             chats: ['active', 'messages'],
+            pageviews: ['pageviews', 'page'],
             accesses: ['accesses']
         };
 
@@ -55,9 +56,13 @@
 
         function buildColumns () {
             var columns = [];
-            $translate(['STATS.ACTIVITY', 'STATS.COMMENTS', 'STATS.DOCUMENTS', 'STATS.LINKS', 'STATS.MEDIA', 'STATS.ACTIVE', 'STATS.MESSAGES'])
+            $translate(['STATS.ACTIVITY', 'STATS.COMMENTS', 'STATS.DOCUMENTS', 'STATS.LINKS', 'STATS.MEDIA', 'STATS.ACTIVE', 'STATS.MESSAGES', 'STATS.COMMUNITIES', 'STATS.PAGE', 'STATS.TITLE', 'STATS.TYPE', 'STATS.PAGEVIEWS'])
                 .then(function (translations) {
                     // var columns = [];
+                    if (self.search_type === 'pageviews'){
+                        self.columns.pageviews = ['page', 'communities', 'title', 'type', 'pageviews'];
+                    }
+
                     angular.forEach(self.columns[self.search_type], function(value){
                         this.push(translations['STATS.'+value.toUpperCase()]);
                     }, columns);

@@ -135,6 +135,11 @@
             $window.location = plonePortalURL + '/chats';
         }
 
+        function PageViews () {
+            $window.location = plonePortalURL + '/pageviews';
+        }
+
+
         function GenerateYearList () {
             var year_list = [];
             for (var year = 2012; year <= moment().year() + 1; year++) {
