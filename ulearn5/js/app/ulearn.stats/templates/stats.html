@@ -36,7 +36,9 @@
 
        <tbody>
        <tr ng-repeat="row in resultsctrl.results">
-          <td ng-repeat="item in row track by $index">{{ item.value }}
+          <td ng-repeat="item in row track by $index">
+            <a ng-show="item.link" href="{{ item.link }}">{{ item.value }}</a>
+            <span ng-show="!item.link">{{ item.value }}</span>
             <a href="" class="fa fa-question-circle"
               ng-show="item.show_drilldown"
               ng-click="resultsctrl.show_modal(item)"></a>

@@ -31,7 +31,7 @@
         self.columns = {
             activity: ['activity', 'comments', 'documents', 'links', 'media'],
             chats: ['active', 'messages'],
-            pageviews: ['communities', 'page',  'title', 'type', 'date', 'pageviews'],
+            pageviews: ['communities', 'title', 'type', 'date', 'pageviews'],
             accesses: ['accesses']
         };
 
