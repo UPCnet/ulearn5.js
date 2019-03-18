@@ -240,6 +240,15 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
             return true;
         }
     };
+
+    self.searchFilterAllCommunities = function (value) {
+        jQuery('select.searchInput option').attr('selected', false);
+        jQuery('select.searchInput').find('option[value="' + value + '"]').attr('selected', true);
+        jQuery('select.searchInput').find('option[value="' + value + '"]').prop('selected', true);
+        $timeout(function() {
+            jQuery('select.searchInput option:selected').change();
+        }, 100);
+    };
 }]);
 
 
