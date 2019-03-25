@@ -52,6 +52,7 @@ ulearn5/js/app/ulearn.stats/ulearn.stats.module.js
 ulearn5/js/app/ulearn.stats/ulearn.stats.values.js
 ulearn5/js/app/ulearn.stats/templates/activity.html
 ulearn5/js/app/ulearn.stats/templates/chats.html
+ulearn5/js/app/ulearn.stats/templates/pageviews.html
 ulearn5/js/app/ulearn.stats/templates/stats.html
 ulearn5/js/app/ulearn.stats/templates/stats.modal.html
 ulearn5/js/browser/__init__.py

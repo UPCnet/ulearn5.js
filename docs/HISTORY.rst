@@ -1,11 +1,14 @@
 Changelog
 =========
 
-0.8 (unreleased)
+0.8 (2019-03-25)
 ----------------
 
-- Nothing changed yet.
-
+* Quitar filtro fecha [Pilar Marinas]
+* Estadisticas pageviews - Abrir enlaces en una nueva pestaña [Iago López Fernández]
+* Estadisticas pageviews - Añadir enlaces [Iago López Fernández]
+* Traducciones estadisticas + pageviews [Iago López Fernández]
+* Estadisticas [Pilar Marinas]
 
 0.7 (2018-11-26)
 ----------------

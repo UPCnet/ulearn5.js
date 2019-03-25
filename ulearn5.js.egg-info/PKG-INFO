@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: ulearn5.js
-Version: 0.7
+Version: 0.8.dev0
 Summary: uLearn ECMAScript dedicated package
 Home-page: https://github.com/UPCnet/ulearn5.js
 Author: PloneTeam
@@ -33,6 +33,15 @@ Description: ====================
         
         Changelog
         =========
+        
+        0.8 (unreleased)
+        ----------------
+        
+        * Quitar filtro fecha [Pilar Marinas]
+        * Estadisticas pageviews - Abrir enlaces en una nueva pestaña [Iago López Fernández]
+        * Estadisticas pageviews - Añadir enlaces [Iago López Fernández]
+        * Traducciones estadisticas + pageviews [Iago López Fernández]
+        * Estadisticas [Pilar Marinas]
         
         0.7 (2018-11-26)
         ----------------
