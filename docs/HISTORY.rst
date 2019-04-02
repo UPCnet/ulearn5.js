@@ -1,11 +1,10 @@
 Changelog
 =========
 
-0.10 (unreleased)
+0.10 (2019-04-02)
 -----------------
 
-- Nothing changed yet.
-
+* Solucionar estadisticas IE11 [Pilar Marinas]
 
 0.9 (2019-03-25)
 ----------------
