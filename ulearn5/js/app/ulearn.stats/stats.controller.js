@@ -91,6 +91,7 @@
         self.export = Export;
         self.stats = Activities;
         self.chats = Chats;
+        self.pageviews = PageViews;
 
         /////////////////////////////////////
 

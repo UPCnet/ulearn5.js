@@ -70,7 +70,7 @@
                 'INFO': 'Daily Information',
                 'COMMUNITIES': 'Community',
                 'PAGE': 'Page',
-                'TITLE': 'Title',
+                'TITLEPAGEVIEWS': 'Title',
                 'TYPE': 'Type',
                 'DATE': 'Date',
                 'PAGEVIEWS': 'Page views'
@@ -137,7 +137,7 @@
                 'INFO': 'Acceso a información diaria',
                 'COMMUNITIES': 'Comunidad',
                 'PAGE': 'Página',
-                'TITLE': 'Título',
+                'TITLEPAGEVIEWS': 'Título',
                 'TYPE': 'Tipo',
                 'DATE': 'Fecha',
                 'PAGEVIEWS': 'Nº Visitas'
@@ -204,7 +204,7 @@
                 'INFO': 'Accés a informació diària',
                 'COMMUNITIES': 'Comunitat',
                 'PAGE': 'Pàgina',
-                'TITLE': 'Títol',
+                'TITLEPAGEVIEWS': 'Títol',
                 'TYPE': 'Tipus',
                 'DATE': 'Data',
                 'PAGEVIEWS': 'Nº Visites'
