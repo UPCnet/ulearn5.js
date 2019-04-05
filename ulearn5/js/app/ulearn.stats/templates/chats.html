@@ -57,7 +57,10 @@
     </label>
 
     <ui-select ng-model="statsctrl.selected_user" theme="selectize">
-      <ui-select-match placeholder="{{'STATS.SEARCHUSERS' | translate}}">{{$select.selected.text}}</ui-select-match>
+      <ui-select-match placeholder="{{'STATS.SEARCHUSERS' | translate}}">
+        <a class="clear" ng-click="statsctrl.selected_user = ''">X</a>
+        {{$select.selected.text}}
+      </ui-select-match>
       <ui-select-choices repeat="principal in statsctrl.principals"
            refresh="statsctrl.refreshUsers($select.search)"
            refresh-delay="400">
