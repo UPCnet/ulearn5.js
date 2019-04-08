@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.11 (unreleased)
+0.11 (2019-04-08)
 -----------------
 
-- Nothing changed yet.
-
+* Grunt estadisticas [Iago López Fernández]
+* Vista stats: Eliminar busqueda del select del usuario [Iago López Fernández]
 
 0.10 (2019-04-02)
 -----------------
