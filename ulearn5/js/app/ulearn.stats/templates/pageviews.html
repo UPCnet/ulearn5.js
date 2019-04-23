@@ -1,4 +1,4 @@
-<div  class="row-fluid">
+<div class="row-fluid">
   <div class="field empty col-xs-12 col-sm-6">
     <label for="form-widgets-IDublinCore-effective" class="horizontal">
     {{ 'STATS.STARTDATE' | translate }}
@@ -53,13 +53,13 @@
 <div class="row-fluid">
   <div class="field empty col-xs-12 col-sm-6">
     <label for="form-widgets-IDublinCore-effective" class="horizontal" i18n:translate="Comunitat_stats">
-      {{ 'STATS.COMMUNITY' | translate }}
+      {{ 'STATS.CONTENT' | translate }}
       <span class="formHelp"></span>
     </label>
 
     <select class="form-control year datetime-widget datetime-field" id="community" name="community"
             ng-model="statsctrl.selected_community"
-            ng-options="community.hash as community.title for community in statsctrl.communities">
+            ng-options="community.hash as community.title for community in statsctrl.pageviews_info">
     </select>
   </div>
 

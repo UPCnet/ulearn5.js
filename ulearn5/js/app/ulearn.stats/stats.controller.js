@@ -11,6 +11,7 @@
     /* @nInject */
     function StatsController($state, $translate, $rootScope, moment, StatsInfo, UserService, ResultsService, $window, $httpParamSerializer, plonePortalURL) {
         var self = this;
+        moment.locale(angular.element('html').attr('lang'));
 
         self.options = {
             format: 'DD/MM/YYYY',
@@ -43,7 +44,6 @@
             },
             activity: 'activity'
         };
-
         $translate(['STATS.ACTIVITY','STATS.TODAY', 'STATS.YESTERDAY', 'STATS.LAST7DAYS', 'STATS.LAST30DAYS', 'STATS.THISMONTH', 'STATS.LASTMONTH',
                     'COMMON.JANUARY', 'COMMON.FEBRUARY', 'COMMON.MARCH', 'COMMON.APRIL', 'COMMON.MAY', 'COMMON.JUNE', 'COMMON.JULY', 'COMMON.AUGUST', 'COMMON.SEPTEMBER', 'COMMON.OCTOBER', 'COMMON.NOVEMBER', 'COMMON.DECEMBER',
                     'STATS.APPLY', 'STATS.CANCEL', 'STATS.FROM', 'STATS.TO', 'STATS.CUSTOM',
@@ -70,6 +70,7 @@
 
         self.principals = [];
         self.availableTags = [];
+        self.pageviews_info = StatsInfo.pageviews_info;
         self.communities = StatsInfo.communities;
         self.extended_report = StatsInfo.extended_report;
         self.selected_user = '';

@@ -73,7 +73,8 @@
                 'TITLEPAGEVIEWS': 'Title',
                 'TYPE': 'Type',
                 'DATE': 'Date',
-                'PAGEVIEWS': 'Page views'
+                'PAGEVIEWS': 'Page views',
+                'CONTENT': 'Content to consult'
             }
         });
 
@@ -140,7 +141,8 @@
                 'TITLEPAGEVIEWS': 'Título',
                 'TYPE': 'Tipo',
                 'DATE': 'Fecha',
-                'PAGEVIEWS': 'Nº Visitas'
+                'PAGEVIEWS': 'Nº Visitas',
+                'CONTENT': 'Contenido a consultar'
             }
         });
 
@@ -207,7 +209,8 @@
                 'TITLEPAGEVIEWS': 'Títol',
                 'TYPE': 'Tipus',
                 'DATE': 'Data',
-                'PAGEVIEWS': 'Nº Visites'
+                'PAGEVIEWS': 'Nº Visites',
+                'CONTENT': 'Contingut a consultar'
             }
         });
         // $translateProvider.preferredLanguage('en');
