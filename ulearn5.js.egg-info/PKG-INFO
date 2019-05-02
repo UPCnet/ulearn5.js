@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: ulearn5.js
-Version: 0.11
+Version: 0.12.dev0
 Summary: uLearn ECMAScript dedicated package
 Home-page: https://github.com/UPCnet/ulearn5.js
 Author: PloneTeam
@@ -33,6 +33,11 @@ Description: ====================
         
         Changelog
         =========
+        
+        0.12 (unreleased)
+        -----------------
+        
+        * Grunt + Vista stats: Definir correctamente valores de los input y hacer traducciones de los meses [Iago López Fernández]
         
         0.11 (2019-04-08)
         -----------------

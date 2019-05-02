@@ -51,6 +51,8 @@ ulearn5/js/app/ulearn.stats/ulearn.stats.config.js
 ulearn5/js/app/ulearn.stats/ulearn.stats.directives.js
 ulearn5/js/app/ulearn.stats/ulearn.stats.module.js
 ulearn5/js/app/ulearn.stats/ulearn.stats.values.js
+ulearn5/js/app/ulearn.stats/locales/moment.ca.js
+ulearn5/js/app/ulearn.stats/locales/moment.es.js
 ulearn5/js/app/ulearn.stats/templates/activity.html
 ulearn5/js/app/ulearn.stats/templates/chats.html
 ulearn5/js/app/ulearn.stats/templates/pageviews.html

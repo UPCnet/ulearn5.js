@@ -1,11 +1,10 @@
 Changelog
 =========
 
-0.12 (unreleased)
+0.12 (2019-05-02)
 -----------------
 
-- Nothing changed yet.
-
+* Grunt + Vista stats: Definir correctamente valores de los input y hacer traducciones de los meses [Iago López Fernández]
 
 0.11 (2019-04-08)
 -----------------
