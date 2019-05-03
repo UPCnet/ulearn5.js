@@ -8,7 +8,7 @@
 }(this, (function (moment) { 'use strict';
 
 
-moment.defineLocale('ca', {
+var ca = moment.defineLocale('ca', {
     months : {
         standalone: 'Gener_Febrer_Març_Abril_Maig_Juny_Juliol_Agost_Setembre_Octubre_Novembre_Desembre'.split('_'),
         format: 'de Gener_de Febrer_de Març_d\'Abril_de Maig_de Juny_de Juliol_d\'Agost_de Setembre_d\'Octubre_de Novembre_de Desembre'.split('_'),
