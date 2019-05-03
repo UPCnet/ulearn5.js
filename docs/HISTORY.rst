@@ -1,11 +1,10 @@
 Changelog
 =========
 
-0.13 (unreleased)
+0.13 (2019-05-03)
 -----------------
 
-- Nothing changed yet.
-
+* Grunt [Pilar Marinas]
 
 0.12 (2019-05-02)
 -----------------
