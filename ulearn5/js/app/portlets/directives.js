@@ -39,8 +39,8 @@ GenwebApp.directive('badge', [function() {
       scope: true,
       replace: true,
       link: function($scope, $element, $attrs) {
-        $scope.badge_png = $attrs.image.replace('.png', '-alt.png');
         $scope.badge_prefix = '++theme++ulearn5/assets/images/';
+        $scope.badge_png = $attrs.image.replace('.png', '-alt.png').replace($scope.badge_prefix, '');
         if ($attrs.enabled === 'True') {
             $scope.badge_prefix = '';
             $scope.badge_png = $attrs.image;

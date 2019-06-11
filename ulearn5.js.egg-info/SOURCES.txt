@@ -3,7 +3,6 @@ Gruntfile.js
 MANIFEST.in
 README.rst
 bower.json
-package-lock.json
 package.json
 setup.cfg
 setup.py
@@ -5690,6 +5689,7 @@ ulearn5/js/components/ngDialog/css/ngDialog.css
 ulearn5/js/components/ngDialog/css/ngDialog.min.css
 ulearn5/js/components/ngDialog/js/ngDialog.js
 ulearn5/js/components/ngDialog/js/ngDialog.min.js
+ulearn5/js/components/polls/collective.polls.js
 ulearn5/js/components/select2/.bower.json
 ulearn5/js/components/select2/.editorconfig
 ulearn5/js/components/select2/.gitignore

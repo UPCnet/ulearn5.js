@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: ulearn5.js
-Version: 0.13
+Version: 0.14.dev0
 Summary: uLearn ECMAScript dedicated package
 Home-page: https://github.com/UPCnet/ulearn5.js
 Author: PloneTeam
@@ -33,6 +33,12 @@ Description: ====================
         
         Changelog
         =========
+        
+        0.14 (unreleased)
+        -----------------
+        
+        - Nothing changed yet.
+        
         
         0.13 (2019-05-03)
         -----------------
