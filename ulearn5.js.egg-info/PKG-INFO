@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: ulearn5.js
-Version: 0.14.dev0
+Version: 0.14
 Summary: uLearn ECMAScript dedicated package
 Home-page: https://github.com/UPCnet/ulearn5.js
 Author: PloneTeam
@@ -34,7 +34,7 @@ Description: ====================
         Changelog
         =========
         
-        0.14 (unreleased)
+        0.14 (2019-06-26)
         -----------------
         
         * Grunt + Arreglar error con la generación de la url de los badges [Iago López Fernández]
