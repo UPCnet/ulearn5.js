@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.14 (unreleased)
+0.14 (2019-06-26)
 -----------------
 
-- Nothing changed yet.
-
+* Grunt + Arreglar error con la generación de la url de los badges [Iago López Fernández]
+* Grunt + Overrided js collective.polls [Iago López Fernández]
 
 0.13 (2019-05-03)
 -----------------
