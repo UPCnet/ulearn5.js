@@ -50,11 +50,11 @@
                   </a>
                   <span data-ng-repeat="field in ctrl.properties">
                     <p class="queryable" data-ng-show="user[field['name']]">
-                        <a target="_blank" data-ng-if="(field['name'] === 'email')"
+                        <a target="_blank" data-ng-if="(field['name'].includes('email'))"
                            data-ng-href="mailto:{{user[field['name']]}}">
                           <i class="queryable {{field['icon']}}"></i>
                         </a>
-                      <span data-ng-if="(field['name'] != 'email')">
+                      <span data-ng-if="(!field['name'].includes('email'))">
                          <i class="queryable {{field['icon']}}" data-ng-click="ctrl.searchby(user[field['name']])"></i>
                       </span>
                       <span data-ng-if="(field['name'] == 'collectiveFaculty')">
