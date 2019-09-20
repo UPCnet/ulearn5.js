@@ -3,7 +3,6 @@ Gruntfile.js
 MANIFEST.in
 README.rst
 bower.json
-package-lock.json
 package.json
 setup.cfg
 setup.py

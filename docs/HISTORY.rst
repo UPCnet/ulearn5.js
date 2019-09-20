@@ -1,11 +1,10 @@
 Changelog
 =========
 
-0.15 (unreleased)
+0.15 (2019-09-20)
 -----------------
 
-- Nothing changed yet.
-
+* mailto: si el campo contiene email [Iago López Fernández]
 
 0.14 (2019-06-26)
 -----------------
