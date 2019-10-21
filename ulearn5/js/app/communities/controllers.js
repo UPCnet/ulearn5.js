@@ -284,6 +284,7 @@ GenwebApp.controller('SearchUsersController', ['_', 'plonePortalURL', 'Community
 
         self.query = q;
         if ((q.length > 2) || (q.length == 0)) {
+            $('.spinner-border').show();
             self.response = $http({
                     method: 'GET',
                     url: self.portalURL + '/searchUser',
@@ -299,7 +300,9 @@ GenwebApp.controller('SearchUsersController', ['_', 'plonePortalURL', 'Community
                     } else {
                         self.pageSize = 100;
                     }
+                    $('.spinner-border').hide();
                 });
+
         }
     }
 
