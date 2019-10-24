@@ -1,11 +1,37 @@
 Changelog
 =========
 
-0.16 (unreleased)
+0.16 (2019-10-24)
 -----------------
 
-- Nothing changed yet.
-
+* Merge remote-tracking branch 'origin/master' into develop [pilar.marinas]
+* Grunt [Iago López Fernández]
+* searchusers: Añadir display none al spinner [Iago López Fernández]
+* searchusers: Añadir spinner [Iago López Fernández]
+* Merge pull request #2 from UPCnet/dependabot/bundler/ulearn5/js/components/bootstrap/jekyll-3.6.3 [Roberto Diaz]
+*  [Roberto Diaz]
+* Bump jekyll from 3.1.6 to 3.6.3 in /ulearn5/js/components/bootstrap [Roberto Diaz]
+* Merge branch 'master' into dependabot/bundler/ulearn5/js/components/bootstrap/jekyll-3.6.3 [Roberto Diaz]
+* Merge pull request #1 from UPCnet/dependabot/bundler/ulearn5/js/components/bootstrap/ffi-1.11.1 [Roberto Diaz]
+*  [Roberto Diaz]
+* Bump ffi from 1.9.14 to 1.11.1 in /ulearn5/js/components/bootstrap [Roberto Diaz]
+* Bump jekyll from 3.1.6 to 3.6.3 in /ulearn5/js/components/bootstrap [dependabot[bot]]
+*  [dependabot[bot]]
+* Bumps [jekyll](https://github.com/jekyll/jekyll) from 3.1.6 to 3.6.3. [dependabot[bot]]
+* - [Release notes](https://github.com/jekyll/jekyll/releases) [dependabot[bot]]
+* - [Changelog](https://github.com/jekyll/jekyll/blob/master/History.markdown) [dependabot[bot]]
+* - [Commits](https://github.com/jekyll/jekyll/compare/v3.1.6...v3.6.3) [dependabot[bot]]
+*  [dependabot[bot]]
+* Signed-off-by: dependabot[bot] <support@github.com> [dependabot[bot]]
+* Bump ffi from 1.9.14 to 1.11.1 in /ulearn5/js/components/bootstrap [dependabot[bot]]
+*  [dependabot[bot]]
+* Bumps [ffi](https://github.com/ffi/ffi) from 1.9.14 to 1.11.1. [dependabot[bot]]
+* - [Release notes](https://github.com/ffi/ffi/releases) [dependabot[bot]]
+* - [Changelog](https://github.com/ffi/ffi/blob/master/CHANGELOG.md) [dependabot[bot]]
+* - [Commits](https://github.com/ffi/ffi/compare/1.9.14...1.11.1) [dependabot[bot]]
+*  [dependabot[bot]]
+* Signed-off-by: dependabot[bot] <support@github.com> [dependabot[bot]]
+* removed dir from repo with gitignore [Roberto Diaz]
 
 0.15 (2019-09-20)
 -----------------
