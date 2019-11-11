@@ -14,6 +14,7 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
     self.user_subscriptions = [];
     self.user_communities = [];
     self.query = $stateParams.search || '';
+    self.plonePortalURL = plonePortalURL;
     self.prom_allcommunities = $http({
             method: 'GET',
             url: plonePortalURL + '/api/communities',

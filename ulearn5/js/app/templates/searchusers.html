@@ -24,12 +24,12 @@
 
     <div class="text-center">
       <div class="spinner-border" style="display: none;">
-        <img src="/++theme++ulearn5/assets/images/spinner.gif" alt="Loading..."/>
+        <img src="{{ctrl.plonePortalURL}}/++theme++ulearn5/assets/images/spinner.gif" alt="Loading..."/>
       </div>
     </div>
 
     <div class="pagination">
-      <dir-pagination-controls boundary-links="true" template-url="++components++ulearn/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+      <dir-pagination-controls boundary-links="true" tal:attributes="template-url {{ctrl.plonePortalURL}}/++components++ulearn/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
     </div>
 
     <section id="userlist">
@@ -82,7 +82,7 @@
 
     </section>
     <div class="pagination">
-      <dir-pagination-controls boundary-links="true" template-url="++components++ulearn/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
+      <dir-pagination-controls boundary-links="true" tal:attributes="template-url {{ctrl.plonePortalURL}}/++components++ulearn/angular-utils-pagination/dirPagination.tpl.html"></dir-pagination-controls>
     </div>
 
 </div>

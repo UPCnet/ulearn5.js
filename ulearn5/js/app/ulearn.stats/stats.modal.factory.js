@@ -18,7 +18,7 @@
         return vModal({
             controller: 'StatsModalController',
             controllerAs: 'statsmodal',
-            templateUrl: '++app++ulearn/ulearn.stats/templates/stats.modal.html'
+            templateUrl: window.PORTAL_URL + '/++app++ulearn/ulearn.stats/templates/stats.modal.html'
         });
     }
 })();

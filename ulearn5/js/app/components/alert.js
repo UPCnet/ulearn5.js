@@ -19,7 +19,7 @@ angular.module('ui.bootstrap.alert', [])
   return {
     restrict:'EA',
     controller:'AlertController',
-    templateUrl:'++app++ulearn/components/alert.html',
+    templateUrl: window.PORTAL_URL + '/++app++ulearn/components/alert.html',
     transclude:true,
     replace:true,
     scope: {
