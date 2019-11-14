@@ -1,11 +1,12 @@
 Changelog
 =========
 
-0.17 (unreleased)
+0.17 (2019-11-14)
 -----------------
 
-- Nothing changed yet.
-
+* Grunt [pilar.marinas]
+* Add portal_url in ++ [pilar.marinas]
+* Add portal_url in ++ [pilar.marinas]
 
 0.16 (2019-10-24)
 -----------------
