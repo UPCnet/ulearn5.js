@@ -193,7 +193,9 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
                 'COMMUNITY_SUBSCRIBE.CANCELBTN',
                 'ALLCOMMUNITIES_VIEW.CONFIRMDELETEBTN',
                 'ALLCOMMUNITIES_VIEW.DELETEDONE',
-                'ALLCOMMUNITIES_VIEW.DELETEERROR'
+                'ALLCOMMUNITIES_VIEW.DELETEERROR',
+                'ALLCOMMUNITIES_VIEW.LINKINTEGRITYERROR',
+                'ALLCOMMUNITIES_VIEW.LINKINTEGRITYERROR2'
             ])
             .then(function (translations) {
                 SweetAlert.swal({
@@ -225,11 +227,23 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
                                         url: community.url
                                     }));
                                 },function errorCallback(response) {
-                                    SweetAlert.swal({
-                                        title: translations['ALLCOMMUNITIES_VIEW.DELETEERROR'],
-                                        type: 'error',
-                                        timer: 2000
-                                    });
+                                    if (response.data.error.includes('LinkIntegrityNotificationException')) {
+                                        var error = response.data.error;
+                                        var errorData = JSON.parse(error.substring(error.indexOf('{', error.indexOf('{') + 1), error.indexOf('}') + 1).replace(/'/g, "\""));
+                                        var text = translations['ALLCOMMUNITIES_VIEW.LINKINTEGRITYERROR'] + ' ' + errorData.url + translations['ALLCOMMUNITIES_VIEW.LINKINTEGRITYERROR2'];
+                                        SweetAlert.swal({
+                                            title: translations['ALLCOMMUNITIES_VIEW.DELETEERROR'],
+                                            text: text,
+                                            type: 'error',
+                                            timer: 10000
+                                        });
+                                    } else {
+                                        SweetAlert.swal({
+                                            title: translations['ALLCOMMUNITIES_VIEW.DELETEERROR'],
+                                            type: 'error',
+                                            timer: 2000
+                                        });
+                                    }
                                 });
                         }
                     });
