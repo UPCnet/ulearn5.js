@@ -32,6 +32,7 @@ GenwebApp.controller('uLearnEditACL', ['$http', 'CodeInfo', 'plonePortalURL', 'M
     // Default datatable options
     self.dtOptions = DTOptionsBuilder.newOptions()
         .withPaginationType('full_numbers')
+        .withDisplayLength(50).withOption('lengthMenu', [50, 100, 150])
         .withBootstrap()
         .withLanguage(DTTranslations[language]);
 
