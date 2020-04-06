@@ -1,11 +1,12 @@
 Changelog
 =========
 
-0.18 (unreleased)
+0.18 (2020-04-06)
 -----------------
 
-- Nothing changed yet.
-
+* Grunt modificar usuarios mostrar editacl [Pilar Marinas]
+* Modificar usuarios a mostrar en el editacl de la comunidad [Pilar Marinas]
+* Mostrar error de LinkIntegrity al borrar una comunidad [Iago López Fernández]
 
 0.17 (2019-11-14)
 -----------------
