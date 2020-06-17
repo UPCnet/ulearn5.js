@@ -16,7 +16,7 @@
         <li dir-paginate="community in ctrl.communities | filter:q | itemsPerPage: ctrl.pageSize" current-page="ctrl.currentPage" ng-cloak>
           <div class="row-fluid">
             <div class="span2">
-              <a ng-href="{{community.url}}">
+              <a ng-href="{{community.url_tab_view}}">
                 <img ng-if="community.image"
                      ng-src="{{community.url}}/@@images/image/thumb" />
                 <img ng-if="!community.image"
@@ -24,7 +24,7 @@
               </a>
             </div>
             <div class="span10">
-              <a ng-href="{{community.url}}">
+              <a ng-href="{{community.url_tab_view}}">
                 <h4>{{community.title}}</h4>
                 <p>{{community.description}}</p>
               </a>
@@ -50,7 +50,7 @@
             </a>
             <a class="community-action community-edit community-icon-"
                ng-if="community.can_manage"
-               ng-href="{{community.url}}/edit">
+               ng-href="{{community.url_community}}/edit">
                {{ 'ALLCOMMUNITIES_VIEW.EDIT' | translate }}
             </a>
             <a class="community-action community-delete community-icon-"
