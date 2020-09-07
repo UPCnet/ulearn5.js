@@ -35,7 +35,7 @@ GenwebApp.directive('maxActivitiesCount', [function() {
 
 GenwebApp.directive('badge', [function() {
     return {
-      template: '<div><img ng-src="{{portal_url}}/{{badge_prefix}}{{badge_png}}" /></div>',
+      template: '<div><img title="{{badge_title}}" alt="{{badge_alt}}" ng-src="{{portal_url}}/{{badge_prefix}}{{badge_png}}" /></div>',
       scope: true,
       replace: true,
       link: function($scope, $element, $attrs) {
@@ -44,6 +44,8 @@ GenwebApp.directive('badge', [function() {
         if ($attrs.enabled === 'True') {
             $scope.badge_prefix = '';
             $scope.badge_png = $attrs.image;
+            $scope.badge_title = $attrs.title;
+            $scope.badge_alt = $attrs.alt;
         }
       },
       controller: ['$scope', '$element', '$attrs', 'plonePortalURL', function($scope, $element, $attrs, plonePortalURL) {
@@ -53,7 +55,9 @@ GenwebApp.directive('badge', [function() {
             if (parseInt($scope.user_activities, 10) >= parseInt($attrs.threshold, 10)) {
                 $scope.badge_prefix = '';
                 $scope.badge_png = $attrs.image;
-          }
+            }
+            $scope.badge_title = $attrs.title;
+            $scope.badge_alt = $attrs.alt;
         });
       }]
     };
