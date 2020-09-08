@@ -1,11 +1,13 @@
 Changelog
 =========
 
-0.20 (unreleased)
+0.20 (2020-09-08)
 -----------------
 
-- Nothing changed yet.
-
+* Grunt ulearn5.js [pilar.marinas]
+* Solucionar que se no añadan usuarios duplicados en el editacl [Pilar Marinas]
+* Añadir title y alt a los badges [Iago López Fernández]
+* Añadir class botón estadísticas - Acceso a información diaria + Grunt [Iago López Fernández]
 
 0.19 (2020-06-25)
 -----------------
