@@ -79,8 +79,19 @@ GenwebApp.controller('uLearnEditACL', ['$http', 'CodeInfo', 'plonePortalURL', 'M
             });
     };
     self.selectUser = function ($item, $model, $select) {
-        $item.role = 'reader';
-        self.users.push($item);
+        var addUser = true;
+        for (var i = 0; i < self.users.length; i++) {
+            if (self.users[i].id.includes($item.id)) {
+                addUser = false;
+                break;
+            }
+        }
+        if (addUser) {
+            $item.role = 'reader';
+            self.users.push($item);
+        } else {
+            $('#DataTables_Table_0_filter input').val($item.id).trigger('input').trigger('change');
+        }
     };
     self.selectGroup = function ($item, $model, $select) {
         $item.role = 'reader';
