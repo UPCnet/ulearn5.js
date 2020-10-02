@@ -278,6 +278,7 @@ GenwebApp.controller('SharedWithMe', ['_', 'plonePortalURL', 'CommunityInfo', 'C
 GenwebApp.controller('SearchUsersController', ['_', 'plonePortalURL', 'CommunityInfo', 'CodeInfo', 'UserSubscriptions', 'SweetAlert', 'MAXInfo', '$http', '$window', '$timeout', '$translate', '$scope', '$stateParams', function (_, plonePortalURL, CommunityInfo, CodeInfo, UserSubscriptions, SweetAlert, MAXInfo, $http, $window, $timeout, $translate, $scope, $stateParams) {
     var self = this;
     self.currentPage = 1;
+    debugger;
     self.query = $stateParams.search || '';
     self.plonePortalURL = plonePortalURL;
     if (CommunityInfo.community_url == '') {
@@ -291,7 +292,6 @@ GenwebApp.controller('SearchUsersController', ['_', 'plonePortalURL', 'Community
     }
 
     self.searchby = function (query) {
-
         var q = query || self.query;
 
         if (q == undefined) {
@@ -299,30 +299,59 @@ GenwebApp.controller('SearchUsersController', ['_', 'plonePortalURL', 'Community
         }
 
         self.query = q;
-        if ((q.length > 2) || (q.length == 0)) {
+        if (event.key == "Enter") {
             $('.spinner-border').show();
             self.response = $http({
-                    method: 'GET',
-                    url: self.portalURL + '/searchUser',
-                    params: {search: q},
-                    headers: {'X-CSRF-TOKEN': CodeInfo.csrf_token}
-                })
-                .then(function (response) {
-                    self.big = response.data.users.big;
-                    self.users = response.data.users;
-                    self.properties = response.data.properties;
-                    if (self.big == false) {
-                        self.pageSize = 10;
-                    } else {
-                        self.pageSize = 100;
-                    }
-                    $('.spinner-border').hide();
-                });
-
+                method: 'GET',
+                url: self.portalURL + '/searchUser',
+                params: {search: q},
+                headers: {'X-CSRF-TOKEN': CodeInfo.csrf_token}
+            })
+            .then(function (response) {
+                self.big = response.data.users.big;
+                self.users = response.data.users;
+                self.properties = response.data.properties;
+                if (self.big == false) {
+                    self.pageSize = 10;
+                } else {
+                    self.pageSize = 100;
+                }
+                $('.spinner-border').hide();
+            });
         }
     }
 
-    self.searchby();
+
+    self.searchbyauto = function () {
+        var q = self.query;
+
+        if (q == undefined) {
+            q = ''
+        }
+
+        self.query = q;
+
+        $('.spinner-border').show();
+        self.response = $http({
+            method: 'GET',
+            url: self.portalURL + '/searchUser',
+            params: {search: q},
+            headers: {'X-CSRF-TOKEN': CodeInfo.csrf_token}
+        })
+        .then(function (response) {
+            self.big = response.data.users.big;
+            self.users = response.data.users;
+            self.properties = response.data.properties;
+            if (self.big == false) {
+                self.pageSize = 10;
+            } else {
+                self.pageSize = 100;
+            }
+            $('.spinner-border').hide();
+        });
+    }
+
+    self.searchbyauto();
 
 }]);
 
@@ -332,7 +361,6 @@ GenwebApp.controller('Thinnkers', ['_', 'plonePortalURL', 'CommunityInfo', 'User
 
 
     self.searchby = function () {
-
         $state.go('search', {
             search: self.query
         })
@@ -340,7 +368,6 @@ GenwebApp.controller('Thinnkers', ['_', 'plonePortalURL', 'CommunityInfo', 'User
     }
 
     self.searchbyenter = function (keyEvent) {
-
         if (keyEvent.which === 13) {
             $state.go('search', {
                 search: self.query
