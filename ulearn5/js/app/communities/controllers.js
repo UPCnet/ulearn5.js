@@ -278,7 +278,6 @@ GenwebApp.controller('SharedWithMe', ['_', 'plonePortalURL', 'CommunityInfo', 'C
 GenwebApp.controller('SearchUsersController', ['_', 'plonePortalURL', 'CommunityInfo', 'CodeInfo', 'UserSubscriptions', 'SweetAlert', 'MAXInfo', '$http', '$window', '$timeout', '$translate', '$scope', '$stateParams', function (_, plonePortalURL, CommunityInfo, CodeInfo, UserSubscriptions, SweetAlert, MAXInfo, $http, $window, $timeout, $translate, $scope, $stateParams) {
     var self = this;
     self.currentPage = 1;
-    debugger;
     self.query = $stateParams.search || '';
     self.plonePortalURL = plonePortalURL;
     if (CommunityInfo.community_url == '') {
