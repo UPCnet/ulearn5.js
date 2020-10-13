@@ -1,11 +1,14 @@
 Changelog
 =========
 
-0.21 (unreleased)
+0.21 (2020-10-13)
 -----------------
 
-- Nothing changed yet.
-
+* Grunt ulearn5.js literales search users [pilar.marinas]
+* Modificar literal busqueda directorio para que indique que se tiene que hacer Enter [Pilar Marinas]
+* Grunt [Iago López Fernández]
+* Quitar debugger [Iago López Fernández]
+* Modificar search, funciona solo pulsando enter y al recargar la pagina [Iago López Fernández]
 
 0.20 (2020-09-08)
 -----------------
