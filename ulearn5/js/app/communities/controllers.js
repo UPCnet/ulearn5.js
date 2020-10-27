@@ -91,7 +91,6 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
             });
     };
 
-
     self.toggleNotNotifyPush = function (community) {
         $http({
                 method: 'POST',
@@ -108,6 +107,29 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
                         SweetAlert.swal({
                             title: 'Error',
                             description: translations['ALLCOMMUNITIES_VIEW.NOTIFYPUSHERROR'],
+                            type: 'error',
+                            timer: 2000
+                        });
+                    });
+            });
+    };
+
+    self.toggleNotNotifyMail = function (community) {
+        $http({
+                method: 'POST',
+                url: community.url + '/toggle-notnotifymail',
+                headers: {
+                    'X-CSRF-TOKEN': CodeInfo.csrf_token
+                }
+            })
+            .then(function successCallback(response) {
+                community.not_notify_mail = !community.not_notify_mail;
+            },function errorCallback(response) {
+                $translate(['ALLCOMMUNITIES_VIEW.NOTIFYMAILERROR'])
+                    .then(function (translations) {
+                        SweetAlert.swal({
+                            title: 'Error',
+                            description: translations['ALLCOMMUNITIES_VIEW.NOTIFYMAILERROR'],
                             type: 'error',
                             timer: 2000
                         });
@@ -192,6 +214,7 @@ GenwebApp.controller('AllCommunities', ['_', 'plonePortalURL', 'CommunityInfo', 
                                     self.user_subscriptions.pop(community.url);
                                     community.favorited = false;
                                     community.not_notify_push = false;
+                                    community.not_notify_mail = false;
                                     SweetAlert.swal({
                                         title: translations['COMMUNITY_UNSUBSCRIBE.DONE'],
                                         type: 'success',
