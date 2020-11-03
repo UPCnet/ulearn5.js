@@ -29,6 +29,14 @@ GenwebApp.controller('uLearnEditACL', ['$http', 'CodeInfo', 'plonePortalURL', 'M
     // Detect language
     var language = angular.element('html').attr('lang');
 
+    if (!('remove' in Element.prototype)) {
+        Element.prototype.remove = function() {
+            if (this.parentNode) {
+                this.parentNode.removeChild(this);
+            }
+        };
+    }
+
     // Default datatable options
     self.dtOptions = DTOptionsBuilder.newOptions()
         .withPaginationType('full_numbers')
@@ -81,7 +89,7 @@ GenwebApp.controller('uLearnEditACL', ['$http', 'CodeInfo', 'plonePortalURL', 'M
     self.selectUser = function ($item, $model, $select) {
         var addUser = true;
         for (var i = 0; i < self.users.length; i++) {
-            if (self.users[i].id.includes($item.id)) {
+            if (self.users[i].id == $item.id) {
                 addUser = false;
                 break;
             }
