@@ -1,11 +1,10 @@
 Changelog
 =========
 
-0.22 (unreleased)
+0.22 (2020-11-11)
 -----------------
 
-- Nothing changed yet.
-
+* Fix editacl IE11 + Grunt [Iago López Fernández]
 
 0.21 (2020-10-13)
 -----------------
