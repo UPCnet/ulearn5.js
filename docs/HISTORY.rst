@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.23 (unreleased)
+0.23 (2020-11-18)
 -----------------
 
-- Nothing changed yet.
-
+* Grunt ulearn5.js [pilar.marinas]
+* Resolver conflictos merge branch notificaciones [pilar.marinas]
 
 0.22 (2020-11-11)
 -----------------
