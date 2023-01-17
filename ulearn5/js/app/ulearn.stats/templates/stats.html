@@ -3,7 +3,7 @@
   <div id="viewlet-above-content-title"></div>
   <h1 class="documentFirstHeading">{{ 'STATS.TITLE' | translate }}</h1>
 
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs" ng-controller="StatsController as statsctrl">
       <li ui-sref-active-eq="active">
         <a ui-sref="stats.activity">{{ 'STATS.ACTIVITY' | translate }}</a>
       </li>
@@ -12,6 +12,9 @@
       </li>
       <li ui-sref-active-eq="active">
         <a ui-sref="stats.pageviews" ui-sref-opts="{reload: true}">{{ 'STATS.PAGEVIEWS' | translate }}</a>
+      </li>
+      <li ng-if="statsctrl.instance_miranza" ui-sref-active-eq="active">
+        <a ui-sref="stats.appviews" ui-sref-opts="{reload: true}">{{ 'STATS.APPVIEWS' | translate }}</a>
       </li>
     </ul>
 

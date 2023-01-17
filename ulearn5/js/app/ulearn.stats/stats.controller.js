@@ -71,6 +71,8 @@
         self.principals = [];
         self.availableTags = [];
         self.pageviews_info = StatsInfo.pageviews_info;
+        self.appviews_info = StatsInfo.appviews_info;
+        self.instance_miranza = (document.querySelector('body').className.includes('site-miranza') === true)? true : false;
         self.communities = StatsInfo.communities;
         self.extended_report = StatsInfo.extended_report;
         self.selected_user = '';
@@ -93,6 +95,7 @@
         self.stats = Activities;
         self.chats = Chats;
         self.pageviews = PageViews;
+        self.appviews = AppViews;
 
         /////////////////////////////////////
 
@@ -140,6 +143,11 @@
         function PageViews () {
             $window.location = plonePortalURL + '/pageviews';
         }
+
+        function AppViews () {
+            $window.location = plonePortalURL + '/appviews';
+        }
+
 
 
         function GenerateYearList () {

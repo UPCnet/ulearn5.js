@@ -40,6 +40,11 @@
               url: '/pageviews',
               templateUrl: window.PORTAL_URL + '/++app++ulearn/ulearn.stats/templates/pageviews.html',
               controller: 'StatsController as statsctrl'
+            })
+            .state('stats.appviews', {
+              url: '/appviews',
+              templateUrl: window.PORTAL_URL + '/++app++ulearn/ulearn.stats/templates/appviews.html',
+              controller: 'StatsController as statsctrl'
             });
     }
 })();

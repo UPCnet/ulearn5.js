@@ -74,6 +74,10 @@
                 'TYPE': 'Type',
                 'DATE': 'Date',
                 'PAGEVIEWS': 'Page views',
+                'APPVIEWS': 'App views',
+                'CATEGORY': 'Route',
+                'ACTION': 'Access',
+                'LABEL': 'Title',
                 'CONTENT': 'Content to consult'
             }
         });
@@ -142,6 +146,10 @@
                 'TYPE': 'Tipo',
                 'DATE': 'Fecha',
                 'PAGEVIEWS': 'Nº Visitas',
+                'APPVIEWS': 'Nº Visitas APP',
+                'CATEGORY': 'Ruta',
+                'ACTION': 'Acceso',
+                'LABEL': 'Título',
                 'CONTENT': 'Contenido a consultar'
             }
         });
@@ -210,6 +218,10 @@
                 'TYPE': 'Tipus',
                 'DATE': 'Data',
                 'PAGEVIEWS': 'Nº Visites',
+                'APPVIEWS': 'Nº Visites APP',
+                'CATEGORY': 'Ruta',
+                'ACTION': 'Accés',
+                'LABEL': 'Títol',
                 'CONTENT': 'Contingut a consultar'
             }
         });
