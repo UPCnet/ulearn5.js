@@ -1,11 +1,11 @@
 Changelog
 =========
 
-0.24 (unreleased)
+0.24 (2023-01-18)
 -----------------
 
-- Nothing changed yet.
-
+* Grunt ulearn5.js estadisticas app [Pilar Marinas]
+* Añadir vista estadisticas app solo para miranza [Pilar Marinas]
 
 0.23 (2020-11-18)
 -----------------
