@@ -120,14 +120,17 @@
         }
 
         function Export () {
-            ResultsService.search_type = $state.current.name;
+            var currentLocaleData = moment.localeData();
+            self.date.startDate = moment({y:self.startYear, M:currentLocaleData.monthsParse(self.startMonth)});
+            self.date.endDate = moment({y:self.endYear, M:currentLocaleData.monthsParse(self.endMonth)});
+            ResultsService.search_type = $state.current.name.replace('stats.', '');
             ResultsService.search_options.start = self.date.startDate.format('YYYY-MM-DD');
             ResultsService.search_options.end = self.date.endDate.format('YYYY-MM-DD');
             ResultsService.search_options.community = self.selected_community;
             ResultsService.search_options.user = self.selected_user.id;
             ResultsService.search_options.keywords = self.selected_tags;
             ResultsService.search_options.format = 'csv';
-
+            ResultsService.search_options.stats_requested = ResultsService.columns[ResultsService.search_type];
             var query = $httpParamSerializer(ResultsService.search_options);
             $window.location = plonePortalURL + '/ulearn-stats-query?' + query;
         }
