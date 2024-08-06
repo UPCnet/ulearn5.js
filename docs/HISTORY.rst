@@ -1,11 +1,10 @@
 Changelog
 =========
 
-0.26 (unreleased)
+0.26 (2024-08-06)
 -----------------
 
-- Nothing changed yet.
-
+* [UPD] Grunt [Iago López]
 
 0.25 (2024-08-06)
 -----------------
