@@ -1,11 +1,10 @@
 Changelog
 =========
 
-0.25 (unreleased)
+0.25 (2024-08-06)
 -----------------
 
-- Nothing changed yet.
-
+* [FIX] ulearn-stats-query [Iago López]
 
 0.24 (2023-01-18)
 -----------------
