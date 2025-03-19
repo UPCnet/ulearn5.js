@@ -1,6 +1,6 @@
 <tal:jsdefines define="portal_state context/@@plone_portal_state;
                        portal_url portal_state/portal_url"
-               condition="viewlet/is_devel_mode">
+               condition="view/devel_mode">
 
 <!-- build:js(.) js/vendor.js -->
 <!-- <script tal:attributes="src string:${portal_url}/++genweb++static/js/fileinput.js"></script>

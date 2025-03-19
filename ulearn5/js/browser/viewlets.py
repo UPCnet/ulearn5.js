@@ -1,19 +1,28 @@
-from five import grok
-from zope.interface import Interface
-from base5.core.browser.viewlets import baseJSViewletManager
-from base5.core.browser.viewlets import baseResourcesViewlet
+from plone.app.layout.viewlets import ViewletBase
 from ulearn5.theme.interfaces import IUlearn5ThemeLayer
-from plone import api
+from zope.interface import Interface
 from plone.app.layout.viewlets.interfaces import IAboveContent
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone import api
 
-class gwJSViewlet(baseResourcesViewlet):
-    grok.context(Interface)
-    grok.viewletmanager(IAboveContent)
-    grok.layer(IUlearn5ThemeLayer)
+class GwJSViewlet(ViewletBase):
+    """Viewlet para incluir un archivo JS en la vista."""
 
     resource_type = 'js'
     current_egg_name = 'ulearn5.js'
 
+    def is_devel_mode(self):
+        return api.env.debug_mode()
+
+    def update(self):
+        self.devel_mode = self.is_devel_mode()
+
+    def render(self):
+        if self.devel_mode:
+            template = ViewPageTemplateFile('viewlets_templates/gwjsdevelviewlet.pt')
+        else:
+            template = ViewPageTemplateFile('viewlets_templates/gwjsproductionviewlet.pt')
+        return template(self)
 
 # class gwJSDevelViewlet(grok.Viewlet):
 #     grok.context(Interface)

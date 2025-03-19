@@ -30,7 +30,7 @@ setup(name='ulearn5.js',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'five.grok',
+#          'five.grok',
           'jarn.jsi18n'
       ],
       extras_require={'test': ['plone.app.testing',

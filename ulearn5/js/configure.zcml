@@ -14,10 +14,8 @@
 
     <!-- Include configuration for dependencies listed in setup.py -->
     <includeDependencies package="." />
-    
+
     <include package="plone.resource" file="meta.zcml"/>
-    <include package="grokcore.component" file="meta.zcml" />
-    <grok:grok package="." />
     <include package=".browser" />
 
     <!-- ++legacy++ulearn, antes ++ulearn++js -->
