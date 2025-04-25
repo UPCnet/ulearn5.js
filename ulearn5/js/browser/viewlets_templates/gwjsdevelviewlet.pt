@@ -8,7 +8,7 @@
 <script tal:attributes="src string:${portal_url}/++genweb++static/js/jquery.nicescroll.js"></script>
 <script tal:attributes="src string:${portal_url}/++genweb++static/js/prettify.js"></script> -->
 <script tal:attributes="src string:${portal_url}/++components++ulearn/alertify/alertify.js"></script>
-<script tal:attributes="src string:${portal_url}/++components++ulearn/select2/select2.js"></script>
+<script tal:attributes="src string:${portal_url}/++components++ulearn/select2/dist/js/select2.js"></script>
 <script tal:attributes="src string:${portal_url}/++components++ulearn/handlebars/handlebars.js"></script>
 <script tal:attributes="src string:${portal_url}/++components++ulearn/typeahead.js/dist/typeahead.jquery.js"></script>
 <script tal:attributes="src string:${portal_url}/++components++ulearn/underscore/underscore.js"></script>
