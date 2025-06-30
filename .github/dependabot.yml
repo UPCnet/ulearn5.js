@@ -1,0 +1,32 @@
+version: 2
+updates:
+  # Configuración para npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    target-branch: "py3"
+    open-pull-requests-limit: 10
+
+  # Configuración para bower
+  - package-ecosystem: "bower"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    target-branch: "py3"
+    open-pull-requests-limit: 10
+
+  # Configuración para el branch master también
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    target-branch: "master"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "bower"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    target-branch: "master"
+    open-pull-requests-limit: 10
