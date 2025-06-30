@@ -4,7 +4,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     target-branch: "py3"
     open-pull-requests-limit: 10
 
@@ -12,7 +12,7 @@ updates:
   - package-ecosystem: "bower"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     target-branch: "py3"
     open-pull-requests-limit: 10
 
@@ -20,13 +20,13 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     target-branch: "master"
     open-pull-requests-limit: 10
 
   - package-ecosystem: "bower"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
     target-branch: "master"
     open-pull-requests-limit: 10
